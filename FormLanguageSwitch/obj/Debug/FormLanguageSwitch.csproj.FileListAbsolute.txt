@@ -1,0 +1,21 @@
+C:\My Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+C:\My Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+C:\My Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+C:\My Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb
+C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb
+C:\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+C:\IQToolsV3\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+C:\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+C:\IQToolsV3\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb
+C:\IQToolsV3ADX\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+C:\IQToolsV3ADX\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+C:\IQToolsV3ADX\IQTools\FormLanguageSwitch\obj\Debug\ResolveAssemblyReference.cache
+C:\IQToolsV3ADX\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+C:\IQToolsV3ADX\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb
+C:\HMIS\Repository\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+C:\HMIS\Repository\IQTools\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+C:\HMIS\Repository\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+C:\HMIS\Repository\IQTools\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb

@@ -1,0 +1,170 @@
+C:\HMIS\Repository\IQTools\IQTools\o2\IQTools.exe.config
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.csproj.ResolveComReference.cache
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\blank.gif
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\cicon1.gif
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\cicon2.gif
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\cicon9.gif
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\cicon_loadindex_ani.gif
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\databaseabstraction.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\default.css
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\helpman_navigation.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\helpman_settings.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\helpman_topicinit.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\highlight.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\index.html
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\iqc_sitedetails.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\iqc_sitedetails_zoom91.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\jquery.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\queryguide_content.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\queryguide_ftsearch.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\queryguide_kwindex.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\queryguide_popup_html.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\query_guide.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\settings.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_ancmothers.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_artpatients.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_artpatients_zoom74.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_clinicalencounters.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_familyinfo.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_familyinfo_zoom68.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_hei.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_hei_zoom74.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_labs.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_labs_zoom77.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_laststatus.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_laststatus_zoom70.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_ois.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_ois_zoom77.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_patientmaster.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_patientmaster.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_pharmacy.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_pharmacy_zoom73.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_pregnancies.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_pregnancies_zoom65.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_tbpatients.htm
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\tmp_tbpatients_zoom77.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\zoom_index.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\zoom_pageinfo.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Help\QueryGuide\zoom_search.js
+C:\HMIS\Repository\IQTools\IQTools\o2\Resources\iqtools_iqcare.xml
+C:\HMIS\Repository\IQTools\IQTools\o2\Service.config
+C:\HMIS\Repository\IQTools\IQTools\o2\Templates\HEI Register Template.xls
+C:\HMIS\Repository\IQTools\IQTools\o2\Templates\OI Drugs Report Template.xls
+C:\HMIS\Repository\IQTools\IQTools\o2\Resources\search2020.png
+C:\HMIS\Repository\IQTools\IQTools\o2\Resources\System.mdw
+C:\HMIS\Repository\IQTools\IQTools\o2\Resources\UserGuide.pdf
+C:\HMIS\Repository\IQTools\IQTools\o2\IQTools.exe.manifest
+C:\HMIS\Repository\IQTools\IQTools\o2\IQTools.application
+C:\HMIS\Repository\IQTools\IQTools\o2\IQTools.exe
+C:\HMIS\Repository\IQTools\IQTools\o2\IQTools.pdb
+C:\HMIS\Repository\IQTools\IQTools\o2\fr\IQTools.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\en\IQTools.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.ActiveQueryBuilder.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.EventMetadataProvider.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.ExpressionEditor.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.MSSQLMetadataProvider.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.MySQLMetadataProvider.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ActiveDatabaseSoftware.UniversalMetadataProvider.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\BusinessLayer.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\DataLayer.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\FormLanguageSwitch.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\GSMCommunication.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\Ionic.Zip.Reduced.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\Mono.Security.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\MySql.Data.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\MySqlBackup.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\Npgsql.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\PDUConverter.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\RS232.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\TabStrip.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\Interop.ADOX.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\EPPlus.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\LibCurlNet.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\Sand.Security.Cryptography.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\GSMCommShared.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\BusinessLayer.pdb
+C:\HMIS\Repository\IQTools\IQTools\o2\DataLayer.pdb
+C:\HMIS\Repository\IQTools\IQTools\o2\FormLanguageSwitch.pdb
+C:\HMIS\Repository\IQTools\IQTools\o2\Npgsql.xml
+C:\HMIS\Repository\IQTools\IQTools\o2\de\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\es\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\fi\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\fr\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\ja\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\o2\zh-CN\Npgsql.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.csprojResolveAssemblyReference.cache
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmBulkPatientSummaries.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmQueryParameters.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucEMRAccessChrome.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucIQToolsForum.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucQueries.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmDHISPassword.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmGetDB.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmLogin.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmMain.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmLoad.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Assets.Messages.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucEMRAccess.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucReports.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Properties.Resources.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmQryParameters.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.UserControls.IQToolsDateHelper.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.UserControls.IQToolsReportDatesControl.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmGetDB.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmLoad.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmLogin.en.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmLogin.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmMain.en.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.frmMain.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Assets.Messages.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.en.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.fr.resources
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.csproj.GenerateResource.Cache
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\fr\IQTools.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\en\IQTools.resources.dll
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.exe.manifest
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.application
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.exe
+C:\HMIS\Repository\IQTools\IQTools\obj\Debug\IQTools.pdb
+E:\IQTools Source Code\IQTools\IQTools\o2\IQTools.exe.config
+E:\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.csproj.ResolveComReference.cache
+E:\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.exe
+E:\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.pdb
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\o2\IQTools.exe.config
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.csproj.ResolveComReference.cache
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.exe
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.pdb
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmBulkPatientSummaries.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmQueryParameters.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucEMRAccessChrome.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucIQToolsForum.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucQueries.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmDHISPassword.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmGetDB.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmLogin.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmMain.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmLoad.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Assets.Messages.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucEMRAccess.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucReports.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Properties.Resources.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmQryParameters.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.UserControls.IQToolsDateHelper.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.UserControls.IQToolsReportDatesControl.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmGetDB.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmLoad.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmLogin.en.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmLogin.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmMain.en.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.frmMain.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Assets.Messages.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.en.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.Pages.ucMessaging.fr.resources
+C:\Users\LOmare\Desktop\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.csproj.GenerateResource.Cache
+C:\Users\LOmare\Desktop\One folder\IQTools Source Code\IQTools\IQTools\o2\IQTools.exe.config
+C:\Users\LOmare\Desktop\One folder\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.csproj.ResolveComReference.cache
+C:\Users\LOmare\Desktop\One folder\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.exe
+C:\Users\LOmare\Desktop\One folder\IQTools Source Code\IQTools\IQTools\obj\Debug\IQTools.pdb

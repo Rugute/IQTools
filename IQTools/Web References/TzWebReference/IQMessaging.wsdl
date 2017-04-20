@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumbers" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendMessagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMessagesResult" type="tns:ArrayOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="boolean" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendSeveralMessages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumbers" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="messages" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSeveralMessagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSeveralMessagesResult" type="tns:ArrayOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:MessageRequestType" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="MessageRequestType">
+        <s:restriction base="s:string">
+          <s:enumeration value="RECEIVED_BY_USER" />
+          <s:enumeration value="SEND_BY_USER" />
+          <s:enumeration value="ALL_MESSAGES" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetMessageLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessageLogResult" type="tns:ArrayOfMessagingLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMessagingLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MessagingLog" nillable="true" type="tns:MessagingLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MessagingLog">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MessagingLogId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageBody" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateSendReceived" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMessageSentToUser" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherSystemUserNumber" type="tns:OtherSystemUserNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OtherSystemUserNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessagingLogs" type="tns:ArrayOfMessagingLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllMessageLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:MessageRequestType" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllMessageLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMessageLogResult" type="tns:ArrayOfMessagingLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessagesSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessages" />
+  </wsdl:message>
+  <wsdl:message name="SendMessagesSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSeveralMessagesSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSeveralMessages" />
+  </wsdl:message>
+  <wsdl:message name="SendSeveralMessagesSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSeveralMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessageLog" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessageLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMessageLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllMessageLog" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMessageLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllMessageLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQMessagingSoap">
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessages">
+      <wsdl:input message="tns:SendMessagesSoapIn" />
+      <wsdl:output message="tns:SendMessagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSeveralMessages">
+      <wsdl:input message="tns:SendSeveralMessagesSoapIn" />
+      <wsdl:output message="tns:SendSeveralMessagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageLog">
+      <wsdl:input message="tns:GetMessageLogSoapIn" />
+      <wsdl:output message="tns:GetMessageLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageLog">
+      <wsdl:input message="tns:GetAllMessageLogSoapIn" />
+      <wsdl:output message="tns:GetAllMessageLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IQMessagingSoap" type="tns:IQMessagingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessages">
+      <soap:operation soapAction="http://tempuri.org/SendMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSeveralMessages">
+      <soap:operation soapAction="http://tempuri.org/SendSeveralMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageLog">
+      <soap:operation soapAction="http://tempuri.org/GetMessageLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageLog">
+      <soap:operation soapAction="http://tempuri.org/GetAllMessageLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IQMessagingSoap12" type="tns:IQMessagingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessages">
+      <soap12:operation soapAction="http://tempuri.org/SendMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSeveralMessages">
+      <soap12:operation soapAction="http://tempuri.org/SendSeveralMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageLog">
+      <soap12:operation soapAction="http://tempuri.org/GetMessageLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageLog">
+      <soap12:operation soapAction="http://tempuri.org/GetAllMessageLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IQMessaging">
+    <wsdl:port name="IQMessagingSoap" binding="tns:IQMessagingSoap">
+      <soap:address location="http://41.73.195.220/IQWebServices/IQMessaging.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IQMessagingSoap12" binding="tns:IQMessagingSoap12">
+      <soap12:address location="http://41.73.195.220/IQWebServices/IQMessaging.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
