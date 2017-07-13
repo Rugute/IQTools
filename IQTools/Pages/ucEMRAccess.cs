@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using BusinessLayer;
 using DataLayer;
@@ -16,6 +10,7 @@ namespace IQTools.Pages
     {
         frmMain fMain;
         string patientPK = "0";
+        string emrType = Entity.GetEMRType();
         public ucEMRAccess(frmMain frm)
         {
             InitializeComponent();
@@ -77,18 +72,20 @@ namespace IQTools.Pages
             string encryptURL = string.Empty;
             string cryptURL = string.Empty;
             string page = string.Empty;
-            if (Convert.ToDouble(clsGbl.EmrVersion) < Convert.ToDouble(3.6))
-            {
-                page = "frmConnect.aspx";
-            }
-            else page = "frmConnect36.aspx";
+            //if (Convert.ToDouble(clsGbl.EmrVersion) < Convert.ToDouble(3.6))
+            //{
+               //page = "frmConnect.aspx";
+            //}
+            //else 
+                page = "frmConnect36.aspx";
             try
             {
                 string IQCareUserName = clsGbl.loggedInUser.UserName;
                 string UserID = clsGbl.loggedInUser.UserID.ToString();
                 string IQCarePassword = ClsUtility.Decrypt(clsGbl.loggedInUser.Password);
                 string TechnicalArea = "1"; //Not used
-                string server = clsGbl.EMRIPAddress;
+                //string server = clsGbl.EMRIPAddress;
+                string server = "localhost";
                 string protocol = "http";
                 string port = "80";
                 string FacilityID = clsGbl.loggedInUser.FacilityID.ToString();
@@ -152,11 +149,11 @@ namespace IQTools.Pages
 
         private void ucEMRAccess_Enter(object sender, EventArgs e)
         {
-            if (clsGbl.PMMS.ToLower() == "iqcare")
+            if (emrType == "iqcare")
             {
                 navigateIQCare();
             }
-            else if (clsGbl.PMMS.ToLower() == "isante")
+            else if (emrType == "isante")
             {
                 navigateISante();
             }

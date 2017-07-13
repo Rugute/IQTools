@@ -1,117 +1,210 @@
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Npgsql.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Mono.Security.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Npgsql.xml
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Npgsql.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Mono.Security.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Npgsql.xml
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
-C:\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\IQToolsV3\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
-C:\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
-C:\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\Npgsql.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\Mono.Security.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\Npgsql.xml
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
-C:\IQToolsV3ADX\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
-C:\IQToolsV3ADX\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\ActiveDatabaseSoftware.MSSQLMetadataProvider.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\LibCurlNet.dll
-C:\IQToolsV3ADX\IQTools\BusinessLayer\bin\Debug\ActiveDatabaseSoftware.ActiveQueryBuilder.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\ActiveDatabaseSoftware.MSSQLMetadataProvider.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\LibCurlNet.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\Npgsql.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\ActiveDatabaseSoftware.ActiveQueryBuilder.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\Mono.Security.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\Npgsql.xml
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
-C:\HMIS\Repository\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
-C:\HMIS\Repository\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
-C:\HMIS\Repository\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.VBRUN.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.MSDATASRC.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.VBRUN.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.MSDATASRC.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\office.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\office.xml
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.MSDATASRC.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\bin\Debug\Interop.VBRUN.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.MSDATASRC.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\Interop.VBRUN.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
+C:\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
+C:\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\IQTools\BusinessLayer\bin\Debug\office.dll
+C:\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
+C:\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\IQTools\BusinessLayer\bin\Debug\office.xml
+C:\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
+C:\IQTools\BusinessLayer\bin\Debug\Interop.MSDATASRC.dll
+C:\IQTools\BusinessLayer\bin\Debug\Interop.VBRUN.dll
+C:\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\IQTools\BusinessLayer\obj\Debug\Interop.MSDATASRC.dll
+C:\IQTools\BusinessLayer\obj\Debug\Interop.VBRUN.dll
+C:\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.MSDATASRC.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.VBRUN.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\office.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\FormLanguageSwitch.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\office.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\Npgsql.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\Mono.Security.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\Npgsql.xml
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\bin\Debug\Interop.ADOX.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Christopher\Desktop\IQTools\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Npgsql.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\MySqlBackup.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Mono.Security.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\Npgsql.xml
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Christopher\OneDrive\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\obj\Debug\Interop.ADOX.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\EPPlus.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\LOmare\Desktop\IQTools Source\BusinessLayer\obj\Debug\BusinessLayer.pdb

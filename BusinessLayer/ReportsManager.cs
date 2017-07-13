@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Text;
 using OfficeOpenXml;
 using System.IO;
 using System.Windows.Forms;
@@ -15,12 +12,15 @@ namespace BusinessLayer
     public class ReportsManager
     {
         string iqtoolsConnString = Entity.getconnString(clsGbl.xmlPath);
+        string serverType = Entity.getServerType(clsGbl.xmlPath);
 
-        public void runReport(Hashtable reportParameters, DataTable satellites, bool bySatellite)
+        public void runReport(Hashtable reportParameters, DataTable satellites, bool bySatellite, bool lineLists)
         {
             string reportName = reportParameters["ReportName"].ToString();
-            string xlTemplate = clsGbl.tmpFolder + reportParameters["ExcelTemplateName"].ToString();
+            //string xlTemplate = clsGbl.tmpFolder + reportParameters["ExcelTemplateName"].ToString();
+            string xlTemplate = "Templates\\" + reportParameters["ExcelTemplateName"].ToString();  
             string xlSheet = reportParameters["ExcelWorksheetName"].ToString();
+            string groupName = reportParameters["GroupName"].ToString();
             Entity en = new Entity();
             string sp = "pr_GetReportData_IQTools";
 
@@ -32,12 +32,14 @@ namespace BusinessLayer
             rName.Add(3, reportName);
 
             DataSet ds = (DataSet)en.ReturnObject(iqtoolsConnString, rName
-                , sp, ClsUtility.ObjectEnum.DataSet, "mssql");
+                , sp, ClsUtility.ObjectEnum.DataSet, serverType);
             int numberOfQueries = ds.Tables[1].Rows.Count;
             DataTableReader queries = ds.Tables[1].CreateDataReader();
             DataTable XLMapping = ds.Tables[2];
             DataTable ReportLineLists = ds.Tables[4];
-            string newF = clsGbl.tmpFolder + reportName + ".xlsx";
+            //string newF = clsGbl.tmpFolder + reportName + ".xlsx";
+            string newF = "IQTools Reports\\" + reportName + " " + DateTime.Now.ToShortDateString() + ".xlsx"; //+ " - " + DateTime.Now.ToShortTimeString() 
+            newF = newF.Replace("/", " ").Replace(":", " ");
             try
             {
                 if (File.Exists(newF))
@@ -99,10 +101,14 @@ namespace BusinessLayer
                             }
                         }
                     }
-                    mapReportLineList(ReportLineLists, package);
+                    if (lineLists)
+                    {
+                        mapReportLineList(ReportLineLists, package);
+                    }
                     mapErrors(reportErrors, package);
                     package.Workbook.Worksheets.Delete(blank);
                     package.Save();
+                    package.Dispose();
                 }
                 System.Diagnostics.Process.Start(newF);
             }
@@ -139,7 +145,7 @@ namespace BusinessLayer
                 queryResults = (DataTable)en.ReturnObject(iqtoolsConnString
                                 , ClsUtility.theParams, sql.Trim()
                                 , ClsUtility.ObjectEnum.DataTable
-                                , "mssql");
+                                , serverType);
             }
             else
             {
@@ -148,7 +154,7 @@ namespace BusinessLayer
                 queryResults = (DataTable)en.ReturnObject(iqtoolsConnString
                                         , ClsUtility.theParams, modifiedQuery.Trim()
                                         , ClsUtility.ObjectEnum.DataTable
-                                        , "mssql");
+                                        , serverType);
             }
             return queryResults;
         }

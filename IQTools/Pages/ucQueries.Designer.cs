@@ -139,9 +139,9 @@
             // tpQueryDesign
             // 
             this.tpQueryDesign.Controls.Add(this.spcDesignQuery);
-            this.tpQueryDesign.Location = new System.Drawing.Point(4, 24);
+            this.tpQueryDesign.Location = new System.Drawing.Point(4, 29);
             this.tpQueryDesign.Name = "tpQueryDesign";
-            this.tpQueryDesign.Size = new System.Drawing.Size(1114, 548);
+            this.tpQueryDesign.Size = new System.Drawing.Size(1114, 543);
             this.tpQueryDesign.TabIndex = 0;
             this.tpQueryDesign.Text = "Design";
             this.tpQueryDesign.UseVisualStyleBackColor = true;
@@ -156,13 +156,14 @@
             // spcDesignQuery.Panel1
             // 
             this.spcDesignQuery.Panel1.Controls.Add(this.queryBuilder1);
+            this.spcDesignQuery.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.spcDesignQuery_Panel1_Paint);
             // 
             // spcDesignQuery.Panel2
             // 
             this.spcDesignQuery.Panel2.Controls.Add(this.flpBasicAdvanced);
             this.spcDesignQuery.Panel2.Controls.Add(this.sqlTextEditor1);
-            this.spcDesignQuery.Size = new System.Drawing.Size(1114, 548);
-            this.spcDesignQuery.SplitterDistance = 383;
+            this.spcDesignQuery.Size = new System.Drawing.Size(1114, 543);
+            this.spcDesignQuery.SplitterDistance = 379;
             this.spcDesignQuery.SplitterWidth = 1;
             this.spcDesignQuery.TabIndex = 0;
             // 
@@ -192,7 +193,7 @@
             this.queryBuilder1.Name = "queryBuilder1";
             this.queryBuilder1.QueryStructureTreeOptions.BackColor = System.Drawing.SystemColors.Window;
             this.queryBuilder1.QueryStructureTreeOptions.ImageList = null;
-            this.queryBuilder1.Size = new System.Drawing.Size(1114, 383);
+            this.queryBuilder1.Size = new System.Drawing.Size(1114, 379);
             this.queryBuilder1.SleepModeText = null;
             this.queryBuilder1.SnapSize = new System.Drawing.Size(5, 5);
             this.queryBuilder1.SQLChanging = false;
@@ -220,7 +221,7 @@
             this.rdbBasic.Checked = true;
             this.rdbBasic.Location = new System.Drawing.Point(3, 3);
             this.rdbBasic.Name = "rdbBasic";
-            this.rdbBasic.Size = new System.Drawing.Size(52, 19);
+            this.rdbBasic.Size = new System.Drawing.Size(64, 24);
             this.rdbBasic.TabIndex = 9;
             this.rdbBasic.TabStop = true;
             this.rdbBasic.Text = "Basic";
@@ -229,9 +230,9 @@
             // rdbAdvanced
             // 
             this.rdbAdvanced.AutoSize = true;
-            this.rdbAdvanced.Location = new System.Drawing.Point(61, 3);
+            this.rdbAdvanced.Location = new System.Drawing.Point(3, 33);
             this.rdbAdvanced.Name = "rdbAdvanced";
-            this.rdbAdvanced.Size = new System.Drawing.Size(78, 19);
+            this.rdbAdvanced.Size = new System.Drawing.Size(96, 24);
             this.rdbAdvanced.TabIndex = 10;
             this.rdbAdvanced.Text = "Advanced";
             this.rdbAdvanced.UseVisualStyleBackColor = true;
@@ -252,7 +253,7 @@
             this.sqlTextEditor1.QueryBuilder = null;
             this.sqlTextEditor1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.sqlTextEditor1.SelectionTextColor = System.Drawing.SystemColors.HighlightText;
-            this.sqlTextEditor1.Size = new System.Drawing.Size(1114, 164);
+            this.sqlTextEditor1.Size = new System.Drawing.Size(1114, 163);
             this.sqlTextEditor1.StringColor = System.Drawing.Color.DarkRed;
             this.sqlTextEditor1.TabIndex = 8;
             this.sqlTextEditor1.TextColor = System.Drawing.SystemColors.WindowText;
@@ -262,9 +263,9 @@
             // tpQueryPreview
             // 
             this.tpQueryPreview.Controls.Add(this.spcPreview);
-            this.tpQueryPreview.Location = new System.Drawing.Point(4, 24);
+            this.tpQueryPreview.Location = new System.Drawing.Point(4, 29);
             this.tpQueryPreview.Name = "tpQueryPreview";
-            this.tpQueryPreview.Size = new System.Drawing.Size(1114, 548);
+            this.tpQueryPreview.Size = new System.Drawing.Size(1114, 543);
             this.tpQueryPreview.TabIndex = 1;
             this.tpQueryPreview.Text = "Preview";
             this.tpQueryPreview.UseVisualStyleBackColor = true;
@@ -287,8 +288,8 @@
             // 
             this.spcPreview.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.spcPreview.Panel2.Controls.Add(this.spcQueryAnalytics);
-            this.spcPreview.Size = new System.Drawing.Size(1114, 548);
-            this.spcPreview.SplitterDistance = 856;
+            this.spcPreview.Size = new System.Drawing.Size(1114, 543);
+            this.spcPreview.SplitterDistance = 864;
             this.spcPreview.SplitterWidth = 2;
             this.spcPreview.TabIndex = 0;
             // 
@@ -305,7 +306,7 @@
             this.dgvPreview.Margin = new System.Windows.Forms.Padding(0);
             this.dgvPreview.Name = "dgvPreview";
             this.dgvPreview.ReadOnly = true;
-            this.dgvPreview.Size = new System.Drawing.Size(854, 546);
+            this.dgvPreview.Size = new System.Drawing.Size(862, 541);
             this.dgvPreview.TabIndex = 0;
             this.dgvPreview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreview_CellContentClick);
             this.dgvPreview.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPreview_DataError);
@@ -326,7 +327,7 @@
             // spcQueryAnalytics.Panel2
             // 
             this.spcQueryAnalytics.Panel2.Controls.Add(this.gpbAnalytics);
-            this.spcQueryAnalytics.Size = new System.Drawing.Size(254, 546);
+            this.spcQueryAnalytics.Size = new System.Drawing.Size(246, 541);
             this.spcQueryAnalytics.SplitterDistance = 229;
             this.spcQueryAnalytics.SplitterWidth = 1;
             this.spcQueryAnalytics.TabIndex = 0;
@@ -348,7 +349,7 @@
             this.gpbEdit.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gpbEdit.Location = new System.Drawing.Point(0, 0);
             this.gpbEdit.Name = "gpbEdit";
-            this.gpbEdit.Size = new System.Drawing.Size(254, 229);
+            this.gpbEdit.Size = new System.Drawing.Size(246, 229);
             this.gpbEdit.TabIndex = 0;
             this.gpbEdit.TabStop = false;
             this.gpbEdit.Text = "Edits";
@@ -359,7 +360,7 @@
             this.lnkExportToExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkExportToExcel.Location = new System.Drawing.Point(92, 206);
             this.lnkExportToExcel.Name = "lnkExportToExcel";
-            this.lnkExportToExcel.Size = new System.Drawing.Size(128, 15);
+            this.lnkExportToExcel.Size = new System.Drawing.Size(163, 20);
             this.lnkExportToExcel.TabIndex = 1;
             this.lnkExportToExcel.TabStop = true;
             this.lnkExportToExcel.Text = "Export Results To Excel";
@@ -376,15 +377,15 @@
             "Isante"});
             this.cboQueryGroup.Location = new System.Drawing.Point(20, 178);
             this.cboQueryGroup.Name = "cboQueryGroup";
-            this.cboQueryGroup.Size = new System.Drawing.Size(69, 23);
+            this.cboQueryGroup.Size = new System.Drawing.Size(69, 28);
             this.cboQueryGroup.TabIndex = 10;
             // 
             // lblSubCategory
             // 
             this.lblSubCategory.AutoSize = true;
-            this.lblSubCategory.Location = new System.Drawing.Point(9, 144);
+            this.lblSubCategory.Location = new System.Drawing.Point(-4, 144);
             this.lblSubCategory.Name = "lblSubCategory";
-            this.lblSubCategory.Size = new System.Drawing.Size(83, 15);
+            this.lblSubCategory.Size = new System.Drawing.Size(103, 20);
             this.lblSubCategory.TabIndex = 9;
             this.lblSubCategory.Text = "Sub-Category:";
             // 
@@ -393,7 +394,7 @@
             this.cboQuerySubCategory.FormattingEnabled = true;
             this.cboQuerySubCategory.Location = new System.Drawing.Point(95, 144);
             this.cboQuerySubCategory.Name = "cboQuerySubCategory";
-            this.cboQuerySubCategory.Size = new System.Drawing.Size(153, 23);
+            this.cboQuerySubCategory.Size = new System.Drawing.Size(153, 28);
             this.cboQuerySubCategory.TabIndex = 8;
             // 
             // cboQueryCategory
@@ -401,25 +402,25 @@
             this.cboQueryCategory.FormattingEnabled = true;
             this.cboQueryCategory.Location = new System.Drawing.Point(95, 115);
             this.cboQueryCategory.Name = "cboQueryCategory";
-            this.cboQueryCategory.Size = new System.Drawing.Size(153, 23);
+            this.cboQueryCategory.Size = new System.Drawing.Size(153, 28);
             this.cboQueryCategory.TabIndex = 7;
             this.cboQueryCategory.SelectedIndexChanged += new System.EventHandler(this.cboQueryCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(34, 115);
+            this.lblCategory.Location = new System.Drawing.Point(17, 118);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(58, 15);
+            this.lblCategory.Size = new System.Drawing.Size(72, 20);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category:";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(22, 45);
+            this.lblDesc.Location = new System.Drawing.Point(6, 47);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(70, 15);
+            this.lblDesc.Size = new System.Drawing.Size(88, 20);
             this.lblDesc.TabIndex = 5;
             this.lblDesc.Text = "Description:";
             // 
@@ -436,9 +437,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(50, 16);
+            this.lblName.Location = new System.Drawing.Point(22, 18);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(42, 15);
+            this.lblName.Size = new System.Drawing.Size(52, 20);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Name:";
             // 
@@ -447,7 +448,7 @@
             this.txtQueryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQueryName.Location = new System.Drawing.Point(95, 16);
             this.txtQueryName.Name = "txtQueryName";
-            this.txtQueryName.Size = new System.Drawing.Size(153, 23);
+            this.txtQueryName.Size = new System.Drawing.Size(153, 27);
             this.txtQueryName.TabIndex = 2;
             // 
             // btnSave
@@ -468,7 +469,7 @@
             this.gpbAnalytics.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpbAnalytics.Location = new System.Drawing.Point(0, 0);
             this.gpbAnalytics.Name = "gpbAnalytics";
-            this.gpbAnalytics.Size = new System.Drawing.Size(254, 316);
+            this.gpbAnalytics.Size = new System.Drawing.Size(246, 311);
             this.gpbAnalytics.TabIndex = 0;
             this.gpbAnalytics.TabStop = false;
             this.gpbAnalytics.Text = "Analytics";
@@ -483,13 +484,13 @@
             this.dgcDataElement,
             this.dgcAvailability});
             this.dgvQueryAnalytics.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvQueryAnalytics.Location = new System.Drawing.Point(3, 19);
+            this.dgvQueryAnalytics.Location = new System.Drawing.Point(3, 23);
             this.dgvQueryAnalytics.Name = "dgvQueryAnalytics";
             this.dgvQueryAnalytics.ReadOnly = true;
             this.dgvQueryAnalytics.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvQueryAnalytics.RowHeadersWidth = 15;
             this.dgvQueryAnalytics.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvQueryAnalytics.Size = new System.Drawing.Size(248, 294);
+            this.dgvQueryAnalytics.Size = new System.Drawing.Size(240, 285);
             this.dgvQueryAnalytics.TabIndex = 0;
             // 
             // dgcDataElement
@@ -511,9 +512,9 @@
             // tpQueryManage
             // 
             this.tpQueryManage.Controls.Add(this.spcManageQueries);
-            this.tpQueryManage.Location = new System.Drawing.Point(4, 24);
+            this.tpQueryManage.Location = new System.Drawing.Point(4, 29);
             this.tpQueryManage.Name = "tpQueryManage";
-            this.tpQueryManage.Size = new System.Drawing.Size(1114, 548);
+            this.tpQueryManage.Size = new System.Drawing.Size(1114, 543);
             this.tpQueryManage.TabIndex = 2;
             this.tpQueryManage.Text = "Search";
             this.tpQueryManage.UseVisualStyleBackColor = true;
@@ -538,7 +539,7 @@
             // 
             this.spcManageQueries.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.spcManageQueries.Panel2.Controls.Add(this.dgvManageQueries);
-            this.spcManageQueries.Size = new System.Drawing.Size(1114, 548);
+            this.spcManageQueries.Size = new System.Drawing.Size(1114, 543);
             this.spcManageQueries.SplitterDistance = 306;
             this.spcManageQueries.SplitterWidth = 2;
             this.spcManageQueries.TabIndex = 0;
@@ -559,7 +560,7 @@
             // spcQueryOps.Panel2
             // 
             this.spcQueryOps.Panel2.Controls.Add(this.gpbDesign);
-            this.spcQueryOps.Size = new System.Drawing.Size(304, 499);
+            this.spcQueryOps.Size = new System.Drawing.Size(304, 494);
             this.spcQueryOps.SplitterDistance = 141;
             this.spcQueryOps.SplitterWidth = 1;
             this.spcQueryOps.TabIndex = 3;
@@ -586,7 +587,7 @@
             this.chkFilterSystem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFilterSystem.Location = new System.Drawing.Point(7, 101);
             this.chkFilterSystem.Name = "chkFilterSystem";
-            this.chkFilterSystem.Size = new System.Drawing.Size(64, 19);
+            this.chkFilterSystem.Size = new System.Drawing.Size(78, 24);
             this.chkFilterSystem.TabIndex = 3;
             this.chkFilterSystem.Text = "System";
             this.chkFilterSystem.UseVisualStyleBackColor = true;
@@ -598,7 +599,7 @@
             this.chkFilterLineLists.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFilterLineLists.Location = new System.Drawing.Point(7, 75);
             this.chkFilterLineLists.Name = "chkFilterLineLists";
-            this.chkFilterLineLists.Size = new System.Drawing.Size(74, 19);
+            this.chkFilterLineLists.Size = new System.Drawing.Size(90, 24);
             this.chkFilterLineLists.TabIndex = 2;
             this.chkFilterLineLists.Text = "Line Lists";
             this.chkFilterLineLists.UseVisualStyleBackColor = true;
@@ -610,7 +611,7 @@
             this.chkFilterAggregates.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFilterAggregates.Location = new System.Drawing.Point(7, 49);
             this.chkFilterAggregates.Name = "chkFilterAggregates";
-            this.chkFilterAggregates.Size = new System.Drawing.Size(86, 19);
+            this.chkFilterAggregates.Size = new System.Drawing.Size(108, 24);
             this.chkFilterAggregates.TabIndex = 1;
             this.chkFilterAggregates.Text = "Aggregates";
             this.chkFilterAggregates.UseVisualStyleBackColor = true;
@@ -622,7 +623,7 @@
             this.chkFilterReports.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFilterReports.Location = new System.Drawing.Point(7, 23);
             this.chkFilterReports.Name = "chkFilterReports";
-            this.chkFilterReports.Size = new System.Drawing.Size(66, 19);
+            this.chkFilterReports.Size = new System.Drawing.Size(82, 24);
             this.chkFilterReports.TabIndex = 0;
             this.chkFilterReports.Text = "Reports";
             this.chkFilterReports.UseVisualStyleBackColor = true;
@@ -637,7 +638,7 @@
             this.gpbDesign.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gpbDesign.Location = new System.Drawing.Point(0, 0);
             this.gpbDesign.Name = "gpbDesign";
-            this.gpbDesign.Size = new System.Drawing.Size(304, 357);
+            this.gpbDesign.Size = new System.Drawing.Size(304, 352);
             this.gpbDesign.TabIndex = 0;
             this.gpbDesign.TabStop = false;
             this.gpbDesign.Text = "Select Query";
@@ -646,7 +647,7 @@
             // 
             this.btnDesignQuery.Location = new System.Drawing.Point(146, 169);
             this.btnDesignQuery.Name = "btnDesignQuery";
-            this.btnDesignQuery.Size = new System.Drawing.Size(110, 23);
+            this.btnDesignQuery.Size = new System.Drawing.Size(110, 40);
             this.btnDesignQuery.TabIndex = 3;
             this.btnDesignQuery.Text = "&Open In Designer";
             this.btnDesignQuery.UseVisualStyleBackColor = true;
@@ -656,7 +657,7 @@
             // 
             this.btnPreviewQuery.Location = new System.Drawing.Point(7, 169);
             this.btnPreviewQuery.Name = "btnPreviewQuery";
-            this.btnPreviewQuery.Size = new System.Drawing.Size(110, 23);
+            this.btnPreviewQuery.Size = new System.Drawing.Size(110, 40);
             this.btnPreviewQuery.TabIndex = 2;
             this.btnPreviewQuery.Text = "&Preview";
             this.btnPreviewQuery.UseVisualStyleBackColor = true;
@@ -667,7 +668,7 @@
             this.lblQueryDescription.AutoSize = true;
             this.lblQueryDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQueryDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueryDescription.Location = new System.Drawing.Point(6, 44);
+            this.lblQueryDescription.Location = new System.Drawing.Point(10, 49);
             this.lblQueryDescription.MaximumSize = new System.Drawing.Size(250, 100);
             this.lblQueryDescription.MinimumSize = new System.Drawing.Size(250, 100);
             this.lblQueryDescription.Name = "lblQueryDescription";
@@ -679,7 +680,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(6, 29);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(70, 15);
+            this.lblDescription.Size = new System.Drawing.Size(88, 20);
             this.lblDescription.TabIndex = 0;
             this.lblDescription.Text = "Description:";
             // 
@@ -727,7 +728,7 @@
             this.dgvManageQueries.Location = new System.Drawing.Point(0, 0);
             this.dgvManageQueries.Name = "dgvManageQueries";
             this.dgvManageQueries.ReadOnly = true;
-            this.dgvManageQueries.Size = new System.Drawing.Size(804, 546);
+            this.dgvManageQueries.Size = new System.Drawing.Size(804, 541);
             this.dgvManageQueries.TabIndex = 0;
             this.dgvManageQueries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageQueries_CellContentClick);
             // 

@@ -16,7 +16,7 @@
     <SccProvider>SAK</SccProvider>
     <ManifestCertificateThumbprint>9703F1E067ADECBB1B561B5AB32D10E86E05455F</ManifestCertificateThumbprint>
     <ManifestKeyFile>IQTools_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <StartupObject>IQTools.Program</StartupObject>
@@ -31,33 +31,34 @@
     </TargetFrameworkProfile>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <PublishUrl>http://iqtools.dnsdynamic.com/IQTools/</PublishUrl>
+    <PublishUrl>ftp://41.206.32.52/iqtools/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
-    <UpdateMode>Background</UpdateMode>
+    <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>IQTools V3</ProductName>
-    <PublisherName>Futures Group</PublisherName>
+    <InstallUrl>http://41.206.32.52/iqtools/</InstallUrl>
+    <ProductName>IQTools</ProductName>
+    <PublisherName>Palladium</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>3.1.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>3.5.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
     <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>o2\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;USE_MODIFIED_CODES</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -88,8 +89,12 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ActiveDatabaseSoftware.ActiveQueryBuilder">
@@ -113,49 +118,13 @@
     <Reference Include="GSMCommunication">
       <HintPath>..\ExternalDlls\GSMCommunication.dll</HintPath>
     </Reference>
-    <Reference Include="Ionic.Zip.Reduced">
-      <HintPath>..\ExternalDlls\Ionic.Zip.Reduced.dll</HintPath>
+    <Reference Include="LibCurlNet, Version=1.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LibCurlNet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalDlls\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalDlls\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalDlls\Microsoft.SqlServer.Smo.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalDlls\Microsoft.SqlServer.SmoExtended.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Vbe.Interop.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Security">
-      <HintPath>..\packages\Npgsql.2.2.6\lib\net40\Mono.Security.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\ExternalDlls\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="MySqlBackup, Version=1.5.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalDlls\MySqlBackup.dll</HintPath>
-    </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\packages\Npgsql.2.2.6\lib\net40\Npgsql.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net40\MySql.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PDUConverter, Version=1.21.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -174,36 +143,45 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TabStrip">
-      <HintPath>..\ExternalDlls\TabStrip.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\ListItem.cs" />
     <Compile Include="Assets\Diagnostics.cs" />
-    <Compile Include="frmBulkPatientSummaries.cs">
+    <Compile Include="Forms\frmBulkPatientSummaries.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBulkPatientSummaries.Designer.cs">
+    <Compile Include="Forms\frmBulkPatientSummaries.Designer.cs">
       <DependentUpon>frmBulkPatientSummaries.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryParameters.cs">
+    <Compile Include="Forms\frmQueryParameters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQueryParameters.Designer.cs">
+    <Compile Include="Forms\frmQueryParameters.Designer.cs">
       <DependentUpon>frmQueryParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucCustomReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ucCustomReport.Designer.cs">
+      <DependentUpon>ucCustomReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\ucEMRAccessChrome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\ucEMRAccessChrome.Designer.cs">
       <DependentUpon>ucEMRAccessChrome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucExcelMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ucExcelMapping.Designer.cs">
+      <DependentUpon>ucExcelMapping.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\ucIQToolsForum.cs">
       <SubType>UserControl</SubType>
@@ -217,34 +195,22 @@
     <Compile Include="Pages\ucQueries.Designer.cs">
       <DependentUpon>ucQueries.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDHISPassword.cs">
+    <Compile Include="Forms\frmDHISPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDHISPassword.Designer.cs">
+    <Compile Include="Forms\frmDHISPassword.Designer.cs">
       <DependentUpon>frmDHISPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGetDB.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGetDB.Designer.cs">
-      <DependentUpon>frmGetDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLoad.Designer.cs">
-      <DependentUpon>frmLoad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.designer.cs">
+    <Compile Include="Forms\frmMain.designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Assets\Messages.Designer.cs">
@@ -278,6 +244,11 @@
     <Compile Include="Pages\ucMessaging.Designer.cs">
       <DependentUpon>ucMessaging.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\IQToolsDateHelper.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -290,24 +261,20 @@
     <Compile Include="UserControls\IQToolsReportDatesControl.Designer.cs">
       <DependentUpon>IQToolsReportDatesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Web References\RemoteWebService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\TzWebReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="frmBulkPatientSummaries.resx">
+    <EmbeddedResource Include="Forms\frmBulkPatientSummaries.resx">
       <DependentUpon>frmBulkPatientSummaries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryParameters.resx">
+    <EmbeddedResource Include="Forms\frmQueryParameters.resx">
       <DependentUpon>frmQueryParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucCustomReport.resx">
+      <DependentUpon>ucCustomReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ucEMRAccessChrome.resx">
       <DependentUpon>ucEMRAccessChrome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucExcelMapping.resx">
+      <DependentUpon>ucExcelMapping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ucIQToolsForum.resx">
       <DependentUpon>ucIQToolsForum.cs</DependentUpon>
@@ -315,43 +282,29 @@
     <EmbeddedResource Include="Pages\ucQueries.resx">
       <DependentUpon>ucQueries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDHISPassword.resx">
+    <EmbeddedResource Include="Forms\frmDHISPassword.resx">
       <DependentUpon>frmDHISPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGetDB.fr.resx">
-      <DependentUpon>frmGetDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGetDB.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmGetDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLoad.fr.resx">
-      <DependentUpon>frmLoad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.en.resx">
+    <EmbeddedResource Include="Forms\frmLogin.en.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.fr.resx">
+    <EmbeddedResource Include="Forms\frmLogin.fr.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.en.resx">
+    <EmbeddedResource Include="Forms\frmMain.en.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.fr.resx">
+    <EmbeddedResource Include="Forms\frmMain.fr.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLoad.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\Messages.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -361,6 +314,7 @@
     <EmbeddedResource Include="Assets\Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ucEMRAccess.resx">
       <DependentUpon>ucEMRAccess.cs</DependentUpon>
@@ -370,18 +324,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQryParameters.resx">
+    <EmbeddedResource Include="Forms\frmQryParameters.resx">
       <DependentUpon>frmQryParameters.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Pages\ucMessaging.en.resx">
       <DependentUpon>ucMessaging.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,51 +346,146 @@
     <EmbeddedResource Include="UserControls\IQToolsReportDatesControl.resx">
       <DependentUpon>IQToolsReportDatesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <Content Include="DB\IQCare\Procedures.sql" />
+    <Content Include="DB\IQCare\TableData.sql" />
+    <Content Include="IQTools Reports\web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Service.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frmQryParameters.cs">
+    <Compile Include="Forms\frmQryParameters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQryParameters.designer.cs">
+    <Compile Include="Forms\frmQryParameters.designer.cs">
       <DependentUpon>frmQryParameters.cs</DependentUpon>
     </Compile>
-    <Compile Include="Assets\SqlCommon.cs" />
-    <Compile Include="Assets\UtFunctions.cs" />
-    <Compile Include="Assets\Utilities.cs" />
-    <None Include="Templates\HEI Register Template.xls">
+    <Content Include="DB\IQCare\Functions.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Templates\OI Drugs Report Template.xls">
+    </Content>
+    <Content Include="DB\IQCare\Tables.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Web References\RemoteWebService\GeoLocation.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\RemoteWebService\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\RemoteWebService\Service1.wsdl" />
-    <None Include="Web References\TzWebReference\IQMessaging.wsdl" />
-    <None Include="Web References\TzWebReference\MessagingLog.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\TzWebReference\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
+    <Content Include="Resources\MER 2 0 Indicator Reference Guide v2.1 Jan 2017.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\wrong.png" />
+    <None Include="Resources\right.png" />
+    <Content Include="Templates\FCDRR Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\IPT Register Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\KeRC Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MoH731 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\OI Drugs Report Template.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\OPD Drug Consumption Report Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\QI Indicators Summary Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\OI Drugs Report Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HIV Care And Treatment Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HEI Register Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MoH731_2015 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MOH 705A Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MOH 705B Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MOH 710 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MOH 711.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MOH 717 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MoH511 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\WRP_MoH731 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\PatientSummary_Adult Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\PatientSummary_Paed Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\IPTReport Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\DENTAL_Report Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\ART Register Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MoH731_2016 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\NASCOP_MOH731 Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\ActivitySheet Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\PreART Register Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\CohortAnalysis.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\FMAPS Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HCA Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HTSMonthlyReport Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HTCLabRegister Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\DailyActivityOIARV Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MER 2 0 Indicator Reference Guide v2.1 Jan 2017.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\PEPFAR MER Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
@@ -452,17 +496,8 @@
       <Project>{40F8C195-19F4-40CD-8A22-E8EA879144E2}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FormLanguageSwitch\FormLanguageSwitch.csproj">
-      <Project>{B5CB9412-FBD3-49A9-8811-55A572BC7EF7}</Project>
-      <Name>FormLanguageSwitch</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="IQTools.Pre-requisites">
-      <Visible>False</Visible>
-      <ProductName>IQTools Pre-requisites</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -510,19 +545,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IQToolsNet.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Futures Collage.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\IQTools Collage.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\futures banner.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Help\QueryGuide\blank.gif">
@@ -663,163 +689,154 @@
     <Content Include="Help\QueryGuide\zoom_search.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Access_add16x16.png" />
-    <Content Include="Resources\excel.png" />
+    <None Include="Resources\icap_logo.png" />
     <Content Include="Resources\iqc.ico" />
     <Content Include="Resources\IQTools Collage Short.jpg" />
     <None Include="Resources\iqtools.jpg" />
+    <Content Include="Resources\iqtools_cpad.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\iqtools_iqcare.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\isante_ht.gif" />
-    <None Include="Web References\RemoteWebService\Service1.disco" />
-    <None Include="Web References\TzWebReference\IQMessaging.disco" />
     <None Include="Resources\isante_ht1.gif" />
     <Content Include="Resources\progress2.gif" />
     <Content Include="Resources\progress4.gif" />
     <Content Include="Resources\progressWheel5.gif" />
     <None Include="Resources\search-icon.png" />
-    <Content Include="Resources\search-server-16x16.png" />
     <None Include="Resources\Search1.ico" />
     <None Include="Resources\Search1.png" />
     <None Include="Resources\search2020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Resources\storprop_dll_Ico9_ico_Ico1.ico" />
-    <Content Include="Resources\storprop_dll_Ico9_ico_Ico11.ico" />
-    <Content Include="Resources\Excel.ico" />
-    <None Include="Resources\Excel1.ico" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\CC-SA.jpg" />
     <None Include="Resources\System.mdw">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\UserGuide.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.Dmf">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.Management.Sdk.Sfc">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.Management.SmoMetadataProvider">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.Management.SqlParser">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.RegSvrEnum">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.ServiceBrokerEnum">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.SqlServer.SqlEnum">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.Vbe.Interop">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="MySql.Data">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\iqtools_iqcare.xml">
+      <Visible>False</Visible>
       <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
@@ -828,30 +845,7 @@
   <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://41.73.195.220/IQWebServices/IQMessaging.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\TzWebReference\</RelPath>
-      <UpdateFromURL>http://41.73.195.220/IQWebServices/IQMessaging.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>IQTools_TzWebReference_IQMessaging</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:4944/Service1.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\RemoteWebService\</RelPath>
-      <UpdateFromURL>http://localhost:4944/Service1.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>IQTools_RemoteWebService_Service1</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

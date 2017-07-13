@@ -1,0 +1,11 @@
+﻿C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools> "C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll" /R:"C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.exe" /R:"C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll" /out:"C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.XmlSerializers.dll" /debug- /optimize+ /nostdlib /D:_DYNAMIC_XMLSERIALIZER_COMPILATION  "C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\twusws2c.0.cs"
+
+
+Microsoft (R) Visual C# Compiler version 4.6.0076.2
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+c:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\twusws2c.0.cs(2646,59): warning CS0219: The variable 'a_1' is assigned but its value is never used
+c:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\twusws2c.0.cs(2647,17): warning CS0219: The variable 'ca_1' is assigned but its value is never used

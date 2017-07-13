@@ -18,7 +18,8 @@ namespace BusinessLayer
         // TODO Change this to location where Users Group has modify rights by default
 
         //public static string xmlPath = System.Windows.Forms.Application.StartupPath + "\\Service.config";
-        public static string xmlPath = "C:\\Cohort\\Service.config";
+        //public static string xmlPath = "C:\\Cohort\\Service.config";
+        public static string xmlPath = "C:\\Program Files (x86)\\Palladium Group\\IQTools\\IQTools.exe.config";
         public static string IQDbase = "";
         public static bool connTest = false;
         public static string StrComparisons = "";
@@ -32,7 +33,7 @@ namespace BusinessLayer
         public static string EmrVersion = "";
         public static string EMRIPAddress = "";
 
-        //TODO VY Done 2013/07/16 flags showing where the report should be outputed. and other DHIS varriables
+ 
         public static bool sendToDHIS = false;
         //public static bool openInExcel = true;
         public static string periodType = "";
@@ -59,13 +60,14 @@ namespace BusinessLayer
         public static string ToUnPack = "";
         public static int progress = 0;
         // Excel reporting variables
-        public static string tmpFolder = "C:\\Cohort\\Formulas\\";
+        public static string tmpFolder = "C:\\Program Files (x86)\\Palladium Group\\IQTools\\Templates\\";
+        //public static string tmpFolder = "C:\\Cohort\\Formulas\\";
         public static string tblRefresh = "";
         public static string locType = "";
         
         // Globalization
 
-        public static CultureInfoDisplayItem cidi = null;
+        //public static CultureInfoDisplayItem cidi = null;
 
         //KKirui List of PatientIDS - for Bulk Patient summary generation
         public static List<string> PatientIDs = new List<string>();

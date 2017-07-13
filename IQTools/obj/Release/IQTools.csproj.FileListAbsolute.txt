@@ -1,0 +1,268 @@
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\blank.gif
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\cicon1.gif
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\cicon2.gif
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\cicon9.gif
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\cicon_loadindex_ani.gif
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\databaseabstraction.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\default.css
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\helpman_navigation.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\helpman_settings.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\helpman_topicinit.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\highlight.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\index.html
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\iqc_sitedetails.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\iqc_sitedetails_zoom91.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\jquery.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\queryguide_content.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\queryguide_ftsearch.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\queryguide_kwindex.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\queryguide_popup_html.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\query_guide.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\settings.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_ancmothers.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_artpatients.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_artpatients_zoom74.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_clinicalencounters.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_familyinfo.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_familyinfo_zoom68.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_hei.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_hei_zoom74.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_labs.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_labs_zoom77.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_laststatus.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_laststatus_zoom70.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_ois.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_ois_zoom77.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_patientmaster.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_patientmaster.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_pharmacy.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_pharmacy_zoom73.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_pregnancies.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_pregnancies_zoom65.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_tbpatients.htm
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\tmp_tbpatients_zoom77.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\zoom_index.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\zoom_pageinfo.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Help\QueryGuide\zoom_search.js
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Resources\iqtools_cpad.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Resources\iqtools_iqcare.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Service.config
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Templates\HEI Register Template.xls
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Templates\OI Drugs Report Template.xls
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Resources\search2020.png
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Resources\System.mdw
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Resources\UserGuide.pdf
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.exe.config
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.exe.manifest
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.application
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.exe
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.XmlSerializers.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\IQTools.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\fr\IQTools.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\en\IQTools.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.ActiveQueryBuilder.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.EventMetadataProvider.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.ExpressionEditor.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.MSSQLMetadataProvider.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.MySQLMetadataProvider.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ActiveDatabaseSoftware.UniversalMetadataProvider.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\FormLanguageSwitch.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\GSMCommunication.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Ionic.Zip.Reduced.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Mono.Security.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\MySqlBackup.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Npgsql.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\PDUConverter.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\RS232.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\TabStrip.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\EPPlus.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\GSMCommShared.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\FormLanguageSwitch.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\Npgsql.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\de\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\es\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\fi\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\fr\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\ja\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.csprojResolveAssemblyReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.csproj.ResolveComReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmBulkPatientSummaries.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmQueryParameters.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucEMRAccessChrome.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucIQToolsForum.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucQueries.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmDHISPassword.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmGetDB.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmLogin.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmMain.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmLoad.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Assets.Messages.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucEMRAccess.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucReports.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Properties.Resources.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmQryParameters.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucMessaging.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.UserControls.IQToolsDateHelper.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.UserControls.IQToolsReportDatesControl.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmGetDB.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmLoad.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmLogin.en.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmLogin.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmMain.en.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.frmMain.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Assets.Messages.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucMessaging.en.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.Pages.ucMessaging.fr.resources
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.csproj.GenerateResource.Cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\fr\IQTools.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\en\IQTools.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.exe.manifest
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.application
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.exe
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQTools\obj\Release\IQTools.XmlSerializers.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools.exe.config
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.exe
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\OI Drugs Report Template.xls
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\blank.gif
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\cicon1.gif
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\cicon2.gif
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\cicon9.gif
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\cicon_loadindex_ani.gif
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\databaseabstraction.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\default.css
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\helpman_navigation.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\helpman_settings.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\helpman_topicinit.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\highlight.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\index.html
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\iqc_sitedetails.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\iqc_sitedetails_zoom91.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\jquery.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\queryguide_content.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\queryguide_ftsearch.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\queryguide_kwindex.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\queryguide_popup_html.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\query_guide.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\settings.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_artpatients.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_artpatients_zoom74.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_clinicalencounters.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_familyinfo.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_familyinfo_zoom68.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_hei.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_hei_zoom74.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_labs.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_labs_zoom77.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_laststatus.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_laststatus_zoom70.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_ois.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_ois_zoom77.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_patientmaster.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_patientmaster.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_pharmacy.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_pharmacy_zoom73.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_pregnancies.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_pregnancies_zoom65.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_tbpatients.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_tbpatients_zoom77.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\zoom_index.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\zoom_pageinfo.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\zoom_search.js
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Resources\search2020.png
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools Reports\web.config
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\DB\IQCare\Functions.sql
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\DB\IQCare\Tables.sql
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\FCDRR Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\FMAPS Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\IPT Register Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\KeRC Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\MoH731 Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\OPD Drug Consumption Report Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\PEPFAR MER Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\QI Indicators Summary Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\OI Drugs Report Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\ART Register Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\HIV Care And Treatment Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\HEI Register Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\PreART Register Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\MoH731_2015 Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Help\QueryGuide\tmp_ancmothers.htm
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Resources\iqtools_cpad.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Resources\iqtools_iqcare.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Resources\System.mdw
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools.exe.manifest
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools.application
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools.exe
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\IQTools.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\en\IQTools.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\fr\IQTools.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.ActiveQueryBuilder.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.EventMetadataProvider.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.ExpressionEditor.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.MSSQLMetadataProvider.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.MySQLMetadataProvider.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ActiveDatabaseSoftware.UniversalMetadataProvider.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\BusinessLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\DataLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\GSMCommunication.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\MySql.Data.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\PDUConverter.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\RS232.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\EPPlus.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Npgsql.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\MySqlBackup.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\GSMCommShared.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Mono.Security.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\BusinessLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\DataLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Npgsql.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\de\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\es\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\fi\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\fr\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\ja\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmBulkPatientSummaries.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmQueryParameters.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucEMRAccessChrome.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucIQToolsForum.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucQueries.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmDHISPassword.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmLogin.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmMain.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Assets.Messages.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucEMRAccess.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucReports.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Properties.Resources.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmQryParameters.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucMessaging.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.UserControls.IQToolsDateHelper.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.UserControls.IQToolsReportDatesControl.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmLogin.en.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmLogin.fr.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmMain.en.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.frmMain.fr.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Assets.Messages.fr.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucMessaging.en.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.Pages.ucMessaging.fr.resources
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.csproj.GenerateResource.Cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\en\IQTools.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\fr\IQTools.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.exe.manifest
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\obj\Release\IQTools.application
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\MOH 705B Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\Templates\MOH 705A Template.xlsx
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\IQTools\bin\Release\LibCurlNet.dll

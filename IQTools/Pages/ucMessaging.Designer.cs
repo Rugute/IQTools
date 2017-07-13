@@ -151,6 +151,7 @@
             this.MySQLData = new ActiveDatabaseSoftware.ActiveQueryBuilder.UniversalMetadataProvider(this.components);
             this.MySQLSyntax = new ActiveDatabaseSoftware.ActiveQueryBuilder.MySQLSyntaxProvider(this.components);
             this.spcMain = new System.Windows.Forms.SplitContainer();
+            this.piclogo = new System.Windows.Forms.PictureBox();
             this.picMessaging = new System.Windows.Forms.PictureBox();
             this.tcMessaging.SuspendLayout();
             this.tpSendSMS.SuspendLayout();
@@ -200,6 +201,7 @@
             this.spcMain.Panel1.SuspendLayout();
             this.spcMain.Panel2.SuspendLayout();
             this.spcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.piclogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMessaging)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,10 +223,10 @@
             // tpSendSMS
             // 
             this.tpSendSMS.Controls.Add(this.tlpSendSMS);
-            this.tpSendSMS.Location = new System.Drawing.Point(4, 24);
+            this.tpSendSMS.Location = new System.Drawing.Point(4, 29);
             this.tpSendSMS.Margin = new System.Windows.Forms.Padding(0);
             this.tpSendSMS.Name = "tpSendSMS";
-            this.tpSendSMS.Size = new System.Drawing.Size(1075, 413);
+            this.tpSendSMS.Size = new System.Drawing.Size(1075, 408);
             this.tpSendSMS.TabIndex = 0;
             this.tpSendSMS.Text = "Send SMS";
             this.tpSendSMS.UseVisualStyleBackColor = true;
@@ -243,7 +245,7 @@
             this.tlpSendSMS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSendSMS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpSendSMS.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpSendSMS.Size = new System.Drawing.Size(1075, 413);
+            this.tlpSendSMS.Size = new System.Drawing.Size(1075, 408);
             this.tlpSendSMS.TabIndex = 0;
             // 
             // spcSendSMS
@@ -264,7 +266,7 @@
             this.spcSendSMS.Panel2.Controls.Add(this.gbLogs);
             this.spcSendSMS.Panel2.Controls.Add(this.gbMessage);
             this.spcSendSMS.Panel2.Controls.Add(this.gbSendUsing);
-            this.spcSendSMS.Size = new System.Drawing.Size(1075, 363);
+            this.spcSendSMS.Size = new System.Drawing.Size(1075, 358);
             this.spcSendSMS.SplitterDistance = 640;
             this.spcSendSMS.SplitterWidth = 1;
             this.spcSendSMS.TabIndex = 0;
@@ -282,7 +284,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 174F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(640, 363);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(640, 358);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // gbRecipients
@@ -312,7 +314,7 @@
             this.txtNoOfRecords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoOfRecords.Location = new System.Drawing.Point(541, 152);
             this.txtNoOfRecords.Name = "txtNoOfRecords";
-            this.txtNoOfRecords.Size = new System.Drawing.Size(59, 13);
+            this.txtNoOfRecords.Size = new System.Drawing.Size(71, 17);
             this.txtNoOfRecords.TabIndex = 7;
             this.txtNoOfRecords.Text = "Records";
             // 
@@ -331,7 +333,7 @@
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Location = new System.Drawing.Point(146, 29);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(353, 21);
+            this.cboCategory.Size = new System.Drawing.Size(353, 27);
             this.cboCategory.TabIndex = 4;
             this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
@@ -341,7 +343,7 @@
             this.lblOR.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOR.Location = new System.Drawing.Point(223, 100);
             this.lblOR.Name = "lblOR";
-            this.lblOR.Size = new System.Drawing.Size(22, 13);
+            this.lblOR.Size = new System.Drawing.Size(29, 19);
             this.lblOR.TabIndex = 3;
             this.lblOR.Text = "OR";
             // 
@@ -350,7 +352,7 @@
             this.cboSubCategory.FormattingEnabled = true;
             this.cboSubCategory.Location = new System.Drawing.Point(146, 61);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.Size = new System.Drawing.Size(353, 21);
+            this.cboSubCategory.Size = new System.Drawing.Size(353, 27);
             this.cboSubCategory.TabIndex = 5;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
             // 
@@ -359,7 +361,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Location = new System.Drawing.Point(29, 32);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(56, 13);
+            this.lblCategory.Size = new System.Drawing.Size(68, 19);
             this.lblCategory.TabIndex = 0;
             this.lblCategory.Text = "Category:";
             // 
@@ -368,7 +370,7 @@
             this.lblSubCategory.AutoSize = true;
             this.lblSubCategory.Location = new System.Drawing.Point(29, 64);
             this.lblSubCategory.Name = "lblSubCategory";
-            this.lblSubCategory.Size = new System.Drawing.Size(79, 13);
+            this.lblSubCategory.Size = new System.Drawing.Size(95, 19);
             this.lblSubCategory.TabIndex = 1;
             this.lblSubCategory.Text = "Sub Category:";
             // 
@@ -381,7 +383,7 @@
             this.dgvRecipients.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvRecipients.Location = new System.Drawing.Point(3, 177);
             this.dgvRecipients.Name = "dgvRecipients";
-            this.dgvRecipients.Size = new System.Drawing.Size(634, 183);
+            this.dgvRecipients.Size = new System.Drawing.Size(634, 178);
             this.dgvRecipients.TabIndex = 1;
             // 
             // gbLogs
@@ -392,7 +394,7 @@
             this.gbLogs.Controls.Add(this.txtLogs);
             this.gbLogs.Location = new System.Drawing.Point(3, 313);
             this.gbLogs.Name = "gbLogs";
-            this.gbLogs.Size = new System.Drawing.Size(427, 2);
+            this.gbLogs.Size = new System.Drawing.Size(436, 0);
             this.gbLogs.TabIndex = 2;
             this.gbLogs.TabStop = false;
             this.gbLogs.Text = "LOGS:";
@@ -400,12 +402,12 @@
             // txtLogs
             // 
             this.txtLogs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLogs.Location = new System.Drawing.Point(3, 19);
+            this.txtLogs.Location = new System.Drawing.Point(3, 23);
             this.txtLogs.Multiline = true;
             this.txtLogs.Name = "txtLogs";
             this.txtLogs.ReadOnly = true;
             this.txtLogs.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLogs.Size = new System.Drawing.Size(421, 0);
+            this.txtLogs.Size = new System.Drawing.Size(430, 0);
             this.txtLogs.TabIndex = 0;
             // 
             // gbMessage
@@ -416,7 +418,7 @@
             this.gbMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbMessage.Location = new System.Drawing.Point(3, 155);
             this.gbMessage.Name = "gbMessage";
-            this.gbMessage.Size = new System.Drawing.Size(427, 137);
+            this.gbMessage.Size = new System.Drawing.Size(436, 137);
             this.gbMessage.TabIndex = 1;
             this.gbMessage.TabStop = false;
             this.gbMessage.Text = "MESSAGE:";
@@ -429,12 +431,12 @@
             this.tableLayoutPanel3.Controls.Add(this.lbLanguages, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtMessageToSend, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(421, 115);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(430, 111);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lbLanguages
@@ -442,10 +444,10 @@
             this.lbLanguages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.lbLanguages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbLanguages.FormattingEnabled = true;
-            this.lbLanguages.ItemHeight = 15;
+            this.lbLanguages.ItemHeight = 20;
             this.lbLanguages.Location = new System.Drawing.Point(3, 3);
             this.lbLanguages.Name = "lbLanguages";
-            this.lbLanguages.Size = new System.Drawing.Size(136, 109);
+            this.lbLanguages.Size = new System.Drawing.Size(139, 105);
             this.lbLanguages.TabIndex = 0;
             this.lbLanguages.SelectedIndexChanged += new System.EventHandler(this.lbLanguages_SelectedIndexChanged);
             // 
@@ -453,11 +455,11 @@
             // 
             this.txtMessageToSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.txtMessageToSend.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMessageToSend.Location = new System.Drawing.Point(145, 3);
+            this.txtMessageToSend.Location = new System.Drawing.Point(148, 3);
             this.txtMessageToSend.Multiline = true;
             this.txtMessageToSend.Name = "txtMessageToSend";
             this.txtMessageToSend.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMessageToSend.Size = new System.Drawing.Size(273, 109);
+            this.txtMessageToSend.Size = new System.Drawing.Size(279, 105);
             this.txtMessageToSend.TabIndex = 1;
             // 
             // gbSendUsing
@@ -473,7 +475,7 @@
             this.gbSendUsing.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.gbSendUsing.Location = new System.Drawing.Point(3, 4);
             this.gbSendUsing.Name = "gbSendUsing";
-            this.gbSendUsing.Size = new System.Drawing.Size(427, 130);
+            this.gbSendUsing.Size = new System.Drawing.Size(436, 130);
             this.gbSendUsing.TabIndex = 0;
             this.gbSendUsing.TabStop = false;
             this.gbSendUsing.Text = "SEND USING:";
@@ -485,7 +487,7 @@
             this.lblConnectionStatus.ForeColor = System.Drawing.Color.Red;
             this.lblConnectionStatus.Location = new System.Drawing.Point(92, 99);
             this.lblConnectionStatus.Name = "lblConnectionStatus";
-            this.lblConnectionStatus.Size = new System.Drawing.Size(86, 13);
+            this.lblConnectionStatus.Size = new System.Drawing.Size(109, 19);
             this.lblConnectionStatus.TabIndex = 5;
             this.lblConnectionStatus.Text = "Not Connected";
             // 
@@ -494,7 +496,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(29, 99);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(42, 15);
+            this.lblStatus.Size = new System.Drawing.Size(52, 20);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Status:";
             // 
@@ -513,7 +515,7 @@
             this.cboModemWebService.FormattingEnabled = true;
             this.cboModemWebService.Location = new System.Drawing.Point(33, 61);
             this.cboModemWebService.Name = "cboModemWebService";
-            this.cboModemWebService.Size = new System.Drawing.Size(297, 23);
+            this.cboModemWebService.Size = new System.Drawing.Size(297, 28);
             this.cboModemWebService.TabIndex = 2;
             this.cboModemWebService.SelectedIndexChanged += new System.EventHandler(this.cboModemWebService_SelectedIndexChanged);
             // 
@@ -522,7 +524,7 @@
             this.rbSendUsingWebServ.AutoSize = true;
             this.rbSendUsingWebServ.Location = new System.Drawing.Point(171, 30);
             this.rbSendUsingWebServ.Name = "rbSendUsingWebServ";
-            this.rbSendUsingWebServ.Size = new System.Drawing.Size(88, 19);
+            this.rbSendUsingWebServ.Size = new System.Drawing.Size(109, 24);
             this.rbSendUsingWebServ.TabIndex = 1;
             this.rbSendUsingWebServ.Text = "Web service";
             this.rbSendUsingWebServ.UseVisualStyleBackColor = true;
@@ -534,7 +536,7 @@
             this.rbSendUsingModem.Checked = true;
             this.rbSendUsingModem.Location = new System.Drawing.Point(33, 30);
             this.rbSendUsingModem.Name = "rbSendUsingModem";
-            this.rbSendUsingModem.Size = new System.Drawing.Size(67, 19);
+            this.rbSendUsingModem.Size = new System.Drawing.Size(82, 24);
             this.rbSendUsingModem.TabIndex = 0;
             this.rbSendUsingModem.TabStop = true;
             this.rbSendUsingModem.Text = "Modem";
@@ -547,7 +549,7 @@
             this.flowLayoutPanel1.Controls.Add(this.cmdSend);
             this.flowLayoutPanel1.Controls.Add(this.cmdClearAll);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(724, 366);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(724, 361);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(348, 44);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -575,9 +577,9 @@
             // tpSMSLogs
             // 
             this.tpSMSLogs.Controls.Add(this.tlpSMSLogs);
-            this.tpSMSLogs.Location = new System.Drawing.Point(4, 24);
+            this.tpSMSLogs.Location = new System.Drawing.Point(4, 29);
             this.tpSMSLogs.Name = "tpSMSLogs";
-            this.tpSMSLogs.Size = new System.Drawing.Size(1075, 413);
+            this.tpSMSLogs.Size = new System.Drawing.Size(1075, 408);
             this.tpSMSLogs.TabIndex = 2;
             this.tpSMSLogs.Text = "SMS Logs";
             this.tpSMSLogs.UseVisualStyleBackColor = true;
@@ -593,7 +595,7 @@
             this.tlpSMSLogs.RowCount = 1;
             this.tlpSMSLogs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSMSLogs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 413F));
-            this.tlpSMSLogs.Size = new System.Drawing.Size(1075, 413);
+            this.tlpSMSLogs.Size = new System.Drawing.Size(1075, 408);
             this.tlpSMSLogs.TabIndex = 1;
             // 
             // tlpSMSLogs2
@@ -611,7 +613,7 @@
             this.tlpSMSLogs2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.tlpSMSLogs2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSMSLogs2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlpSMSLogs2.Size = new System.Drawing.Size(1075, 413);
+            this.tlpSMSLogs2.Size = new System.Drawing.Size(1075, 408);
             this.tlpSMSLogs2.TabIndex = 4;
             // 
             // dgvSMSLogs
@@ -622,7 +624,7 @@
             this.dgvSMSLogs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSMSLogs.Location = new System.Drawing.Point(3, 101);
             this.dgvSMSLogs.Name = "dgvSMSLogs";
-            this.dgvSMSLogs.Size = new System.Drawing.Size(1069, 269);
+            this.dgvSMSLogs.Size = new System.Drawing.Size(1069, 264);
             this.dgvSMSLogs.TabIndex = 0;
             // 
             // panel5
@@ -721,7 +723,7 @@
             this.rbInbox.AutoSize = true;
             this.rbInbox.Location = new System.Drawing.Point(367, 56);
             this.rbInbox.Name = "rbInbox";
-            this.rbInbox.Size = new System.Drawing.Size(54, 19);
+            this.rbInbox.Size = new System.Drawing.Size(67, 24);
             this.rbInbox.TabIndex = 6;
             this.rbInbox.Text = "Inbox";
             this.rbInbox.UseVisualStyleBackColor = true;
@@ -731,7 +733,7 @@
             this.rbFailedMessages.AutoSize = true;
             this.rbFailedMessages.Location = new System.Drawing.Point(195, 56);
             this.rbFailedMessages.Name = "rbFailedMessages";
-            this.rbFailedMessages.Size = new System.Drawing.Size(110, 19);
+            this.rbFailedMessages.Size = new System.Drawing.Size(137, 24);
             this.rbFailedMessages.TabIndex = 5;
             this.rbFailedMessages.Text = "Failed messages";
             this.rbFailedMessages.UseVisualStyleBackColor = true;
@@ -743,7 +745,7 @@
             this.rbSentMessages.Checked = true;
             this.rbSentMessages.Location = new System.Drawing.Point(17, 56);
             this.rbSentMessages.Name = "rbSentMessages";
-            this.rbSentMessages.Size = new System.Drawing.Size(102, 19);
+            this.rbSentMessages.Size = new System.Drawing.Size(127, 24);
             this.rbSentMessages.TabIndex = 4;
             this.rbSentMessages.TabStop = true;
             this.rbSentMessages.Text = "Sent messages";
@@ -754,7 +756,7 @@
             this.lblSMSLogsEndDate.AutoSize = true;
             this.lblSMSLogsEndDate.Location = new System.Drawing.Point(259, 23);
             this.lblSMSLogsEndDate.Name = "lblSMSLogsEndDate";
-            this.lblSMSLogsEndDate.Size = new System.Drawing.Size(57, 15);
+            this.lblSMSLogsEndDate.Size = new System.Drawing.Size(73, 20);
             this.lblSMSLogsEndDate.TabIndex = 3;
             this.lblSMSLogsEndDate.Text = "End Date:";
             // 
@@ -763,7 +765,7 @@
             this.lblSMSLogsStartDate.AutoSize = true;
             this.lblSMSLogsStartDate.Location = new System.Drawing.Point(14, 23);
             this.lblSMSLogsStartDate.Name = "lblSMSLogsStartDate";
-            this.lblSMSLogsStartDate.Size = new System.Drawing.Size(61, 15);
+            this.lblSMSLogsStartDate.Size = new System.Drawing.Size(79, 20);
             this.lblSMSLogsStartDate.TabIndex = 2;
             this.lblSMSLogsStartDate.Text = "Start Date:";
             // 
@@ -773,7 +775,7 @@
             this.dtpSMSLogsEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSMSLogsEndDate.Location = new System.Drawing.Point(341, 18);
             this.dtpSMSLogsEndDate.Name = "dtpSMSLogsEndDate";
-            this.dtpSMSLogsEndDate.Size = new System.Drawing.Size(135, 23);
+            this.dtpSMSLogsEndDate.Size = new System.Drawing.Size(135, 27);
             this.dtpSMSLogsEndDate.TabIndex = 1;
             // 
             // dtpSMSLogsStartDate
@@ -782,7 +784,7 @@
             this.dtpSMSLogsStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSMSLogsStartDate.Location = new System.Drawing.Point(104, 18);
             this.dtpSMSLogsStartDate.Name = "dtpSMSLogsStartDate";
-            this.dtpSMSLogsStartDate.Size = new System.Drawing.Size(131, 23);
+            this.dtpSMSLogsStartDate.Size = new System.Drawing.Size(131, 27);
             this.dtpSMSLogsStartDate.TabIndex = 0;
             // 
             // flowLayoutPanel8
@@ -791,7 +793,7 @@
             this.flowLayoutPanel8.Controls.Add(this.CmdClearLogs);
             this.flowLayoutPanel8.Controls.Add(this.cmdResendFailedMsgs);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(646, 376);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(646, 371);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(426, 34);
             this.flowLayoutPanel8.TabIndex = 2;
@@ -821,10 +823,10 @@
             // tpSettings
             // 
             this.tpSettings.Controls.Add(this.tlpSMSSettings);
-            this.tpSettings.Location = new System.Drawing.Point(4, 24);
+            this.tpSettings.Location = new System.Drawing.Point(4, 29);
             this.tpSettings.Name = "tpSettings";
             this.tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSettings.Size = new System.Drawing.Size(1075, 413);
+            this.tpSettings.Size = new System.Drawing.Size(1075, 408);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.UseVisualStyleBackColor = true;
@@ -841,7 +843,7 @@
             this.tlpSMSSettings.RowCount = 1;
             this.tlpSMSSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSMSSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 407F));
-            this.tlpSMSSettings.Size = new System.Drawing.Size(1069, 407);
+            this.tlpSMSSettings.Size = new System.Drawing.Size(1069, 402);
             this.tlpSMSSettings.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -857,7 +859,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1069, 407);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1069, 402);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // tableLayoutPanel8
@@ -875,7 +877,7 @@
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(350, 407);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(350, 402);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // gbCountryCode
@@ -899,7 +901,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(22, 25);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(53, 15);
+            this.label20.Size = new System.Drawing.Size(63, 20);
             this.label20.TabIndex = 10;
             this.label20.Text = "Country:";
             // 
@@ -914,7 +916,7 @@
             "Others"});
             this.cboCountryCode.Location = new System.Drawing.Point(140, 16);
             this.cboCountryCode.Name = "cboCountryCode";
-            this.cboCountryCode.Size = new System.Drawing.Size(171, 23);
+            this.cboCountryCode.Size = new System.Drawing.Size(171, 28);
             this.cboCountryCode.TabIndex = 9;
             this.cboCountryCode.SelectedIndexChanged += new System.EventHandler(this.cboCountryCode_SelectedIndexChanged);
             // 
@@ -922,7 +924,7 @@
             // 
             this.txtCountryCode.Location = new System.Drawing.Point(140, 45);
             this.txtCountryCode.Name = "txtCountryCode";
-            this.txtCountryCode.Size = new System.Drawing.Size(171, 23);
+            this.txtCountryCode.Size = new System.Drawing.Size(171, 27);
             this.txtCountryCode.TabIndex = 2;
             // 
             // cmdSaveCountryCode
@@ -940,7 +942,7 @@
             this.lblCountryCode.AutoSize = true;
             this.lblCountryCode.Location = new System.Drawing.Point(22, 54);
             this.lblCountryCode.Name = "lblCountryCode";
-            this.lblCountryCode.Size = new System.Drawing.Size(82, 15);
+            this.lblCountryCode.Size = new System.Drawing.Size(100, 20);
             this.lblCountryCode.TabIndex = 0;
             this.lblCountryCode.Text = "Country code:";
             // 
@@ -952,7 +954,7 @@
             this.gbMessageSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbMessageSettings.Location = new System.Drawing.Point(3, 143);
             this.gbMessageSettings.Name = "gbMessageSettings";
-            this.gbMessageSettings.Size = new System.Drawing.Size(344, 261);
+            this.gbMessageSettings.Size = new System.Drawing.Size(344, 256);
             this.gbMessageSettings.TabIndex = 1;
             this.gbMessageSettings.TabStop = false;
             this.gbMessageSettings.Text = "MESSAGE SETTINGS:";
@@ -964,10 +966,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbSettingsSubCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.lbSettingsSubCategory.FormattingEnabled = true;
-            this.lbSettingsSubCategory.ItemHeight = 15;
+            this.lbSettingsSubCategory.ItemHeight = 20;
             this.lbSettingsSubCategory.Location = new System.Drawing.Point(21, 70);
             this.lbSettingsSubCategory.Name = "lbSettingsSubCategory";
-            this.lbSettingsSubCategory.Size = new System.Drawing.Size(315, 124);
+            this.lbSettingsSubCategory.Size = new System.Drawing.Size(315, 104);
             this.lbSettingsSubCategory.TabIndex = 2;
             this.lbSettingsSubCategory.SelectedIndexChanged += new System.EventHandler(this.lbSettingsSubCategory_SelectedIndexChanged);
             // 
@@ -978,7 +980,7 @@
             "Appointments"});
             this.cboSettingsCategory.Location = new System.Drawing.Point(100, 32);
             this.cboSettingsCategory.Name = "cboSettingsCategory";
-            this.cboSettingsCategory.Size = new System.Drawing.Size(228, 23);
+            this.cboSettingsCategory.Size = new System.Drawing.Size(228, 28);
             this.cboSettingsCategory.TabIndex = 1;
             this.cboSettingsCategory.SelectedIndexChanged += new System.EventHandler(this.cboSettingsCategory_SelectedIndexChanged);
             // 
@@ -987,7 +989,7 @@
             this.lblMessageCat.AutoSize = true;
             this.lblMessageCat.Location = new System.Drawing.Point(17, 35);
             this.lblMessageCat.Name = "lblMessageCat";
-            this.lblMessageCat.Size = new System.Drawing.Size(58, 15);
+            this.lblMessageCat.Size = new System.Drawing.Size(72, 20);
             this.lblMessageCat.TabIndex = 0;
             this.lblMessageCat.Text = "Category:";
             // 
@@ -1006,7 +1008,7 @@
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(719, 407);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(719, 402);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // tableLayoutPanel10
@@ -1032,9 +1034,9 @@
             // 
             this.lblSettingsLanguage.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSettingsLanguage.AutoSize = true;
-            this.lblSettingsLanguage.Location = new System.Drawing.Point(52, 12);
+            this.lblSettingsLanguage.Location = new System.Drawing.Point(37, 10);
             this.lblSettingsLanguage.Name = "lblSettingsLanguage";
-            this.lblSettingsLanguage.Size = new System.Drawing.Size(62, 15);
+            this.lblSettingsLanguage.Size = new System.Drawing.Size(77, 20);
             this.lblSettingsLanguage.TabIndex = 0;
             this.lblSettingsLanguage.Text = "Language:";
             // 
@@ -1042,9 +1044,9 @@
             // 
             this.lblSettingsMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSettingsMessage.AutoSize = true;
-            this.lblSettingsMessage.Location = new System.Drawing.Point(58, 40);
+            this.lblSettingsMessage.Location = new System.Drawing.Point(44, 40);
             this.lblSettingsMessage.Name = "lblSettingsMessage";
-            this.lblSettingsMessage.Size = new System.Drawing.Size(56, 15);
+            this.lblSettingsMessage.Size = new System.Drawing.Size(70, 20);
             this.lblSettingsMessage.TabIndex = 1;
             this.lblSettingsMessage.Text = "Message:";
             // 
@@ -1052,9 +1054,9 @@
             // 
             this.cboSettingslanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboSettingslanguage.FormattingEnabled = true;
-            this.cboSettingslanguage.Location = new System.Drawing.Point(120, 9);
+            this.cboSettingslanguage.Location = new System.Drawing.Point(120, 7);
             this.cboSettingslanguage.Name = "cboSettingslanguage";
-            this.cboSettingslanguage.Size = new System.Drawing.Size(451, 23);
+            this.cboSettingslanguage.Size = new System.Drawing.Size(451, 28);
             this.cboSettingslanguage.TabIndex = 2;
             this.cboSettingslanguage.SelectedIndexChanged += new System.EventHandler(this.cboSettingslanguage_SelectedIndexChanged);
             // 
@@ -1116,18 +1118,18 @@
             this.lblSMSDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSMSDescription.AutoSize = true;
             this.lblSMSDescription.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSMSDescription.Location = new System.Drawing.Point(3, 9);
+            this.lblSMSDescription.Location = new System.Drawing.Point(3, 7);
             this.lblSMSDescription.Name = "lblSMSDescription";
-            this.lblSMSDescription.Size = new System.Drawing.Size(112, 15);
+            this.lblSMSDescription.Size = new System.Drawing.Size(140, 20);
             this.lblSMSDescription.TabIndex = 0;
             this.lblSMSDescription.Text = "Short appointments";
             // 
             // tpScheduling
             // 
             this.tpScheduling.Controls.Add(this.tableLayoutPanel15);
-            this.tpScheduling.Location = new System.Drawing.Point(4, 24);
+            this.tpScheduling.Location = new System.Drawing.Point(4, 29);
             this.tpScheduling.Name = "tpScheduling";
-            this.tpScheduling.Size = new System.Drawing.Size(1075, 413);
+            this.tpScheduling.Size = new System.Drawing.Size(1075, 408);
             this.tpScheduling.TabIndex = 3;
             this.tpScheduling.Text = "Scheduling";
             this.tpScheduling.UseVisualStyleBackColor = true;
@@ -1143,7 +1145,7 @@
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 413F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1075, 413);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1075, 408);
             this.tableLayoutPanel15.TabIndex = 2;
             // 
             // tableLayoutPanel17
@@ -1161,7 +1163,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1069, 407);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1069, 402);
             this.tableLayoutPanel17.TabIndex = 4;
             // 
             // panel18
@@ -1219,9 +1221,9 @@
             this.lblScheduleSendUsing.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleSendUsing.AutoSize = true;
             this.lblScheduleSendUsing.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleSendUsing.Location = new System.Drawing.Point(107, 137);
+            this.lblScheduleSendUsing.Location = new System.Drawing.Point(91, 134);
             this.lblScheduleSendUsing.Name = "lblScheduleSendUsing";
-            this.lblScheduleSendUsing.Size = new System.Drawing.Size(65, 13);
+            this.lblScheduleSendUsing.Size = new System.Drawing.Size(81, 19);
             this.lblScheduleSendUsing.TabIndex = 4;
             this.lblScheduleSendUsing.Text = "Send using:";
             // 
@@ -1230,9 +1232,9 @@
             this.rbScheduleDaily.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rbScheduleDaily.AutoSize = true;
             this.rbScheduleDaily.Checked = true;
-            this.rbScheduleDaily.Location = new System.Drawing.Point(708, 6);
+            this.rbScheduleDaily.Location = new System.Drawing.Point(708, 4);
             this.rbScheduleDaily.Name = "rbScheduleDaily";
-            this.rbScheduleDaily.Size = new System.Drawing.Size(51, 19);
+            this.rbScheduleDaily.Size = new System.Drawing.Size(64, 24);
             this.rbScheduleDaily.TabIndex = 9;
             this.rbScheduleDaily.TabStop = true;
             this.rbScheduleDaily.Text = "Daily";
@@ -1242,9 +1244,9 @@
             // 
             this.rbScheduleWeekly.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rbScheduleWeekly.AutoSize = true;
-            this.rbScheduleWeekly.Location = new System.Drawing.Point(708, 70);
+            this.rbScheduleWeekly.Location = new System.Drawing.Point(708, 68);
             this.rbScheduleWeekly.Name = "rbScheduleWeekly";
-            this.rbScheduleWeekly.Size = new System.Drawing.Size(63, 19);
+            this.rbScheduleWeekly.Size = new System.Drawing.Size(77, 24);
             this.rbScheduleWeekly.TabIndex = 10;
             this.rbScheduleWeekly.Text = "Weekly";
             this.rbScheduleWeekly.UseVisualStyleBackColor = true;
@@ -1253,9 +1255,9 @@
             // 
             this.rbScheduleMonthly.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rbScheduleMonthly.AutoSize = true;
-            this.rbScheduleMonthly.Location = new System.Drawing.Point(708, 134);
+            this.rbScheduleMonthly.Location = new System.Drawing.Point(708, 132);
             this.rbScheduleMonthly.Name = "rbScheduleMonthly";
-            this.rbScheduleMonthly.Size = new System.Drawing.Size(70, 19);
+            this.rbScheduleMonthly.Size = new System.Drawing.Size(84, 24);
             this.rbScheduleMonthly.TabIndex = 11;
             this.rbScheduleMonthly.Text = "Monthly";
             this.rbScheduleMonthly.UseVisualStyleBackColor = true;
@@ -1265,9 +1267,9 @@
             this.lblScheduleType.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleType.AutoSize = true;
             this.lblScheduleType.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleType.Location = new System.Drawing.Point(647, 9);
+            this.lblScheduleType.Location = new System.Drawing.Point(633, 6);
             this.lblScheduleType.Name = "lblScheduleType";
-            this.lblScheduleType.Size = new System.Drawing.Size(55, 13);
+            this.lblScheduleType.Size = new System.Drawing.Size(69, 19);
             this.lblScheduleType.TabIndex = 12;
             this.lblScheduleType.Text = "Schedule:";
             // 
@@ -1286,7 +1288,7 @@
             this.rbScheduleModem.Checked = true;
             this.rbScheduleModem.Location = new System.Drawing.Point(3, 3);
             this.rbScheduleModem.Name = "rbScheduleModem";
-            this.rbScheduleModem.Size = new System.Drawing.Size(67, 19);
+            this.rbScheduleModem.Size = new System.Drawing.Size(82, 24);
             this.rbScheduleModem.TabIndex = 0;
             this.rbScheduleModem.TabStop = true;
             this.rbScheduleModem.Text = "Modem";
@@ -1295,9 +1297,9 @@
             // rbScheduleWebService
             // 
             this.rbScheduleWebService.AutoSize = true;
-            this.rbScheduleWebService.Location = new System.Drawing.Point(76, 3);
+            this.rbScheduleWebService.Location = new System.Drawing.Point(91, 3);
             this.rbScheduleWebService.Name = "rbScheduleWebService";
-            this.rbScheduleWebService.Size = new System.Drawing.Size(88, 19);
+            this.rbScheduleWebService.Size = new System.Drawing.Size(109, 24);
             this.rbScheduleWebService.TabIndex = 1;
             this.rbScheduleWebService.Text = "Web service";
             this.rbScheduleWebService.UseVisualStyleBackColor = true;
@@ -1317,7 +1319,7 @@
             // 
             this.numDaysEarlier.Location = new System.Drawing.Point(3, 3);
             this.numDaysEarlier.Name = "numDaysEarlier";
-            this.numDaysEarlier.Size = new System.Drawing.Size(49, 23);
+            this.numDaysEarlier.Size = new System.Drawing.Size(49, 27);
             this.numDaysEarlier.TabIndex = 0;
             this.numDaysEarlier.Value = new decimal(new int[] {
             2,
@@ -1329,19 +1331,19 @@
             // 
             this.lblDaysEarlier.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDaysEarlier.AutoSize = true;
-            this.lblDaysEarlier.Location = new System.Drawing.Point(58, 7);
+            this.lblDaysEarlier.Location = new System.Drawing.Point(58, 6);
             this.lblDaysEarlier.Name = "lblDaysEarlier";
-            this.lblDaysEarlier.Size = new System.Drawing.Size(79, 15);
+            this.lblDaysEarlier.Size = new System.Drawing.Size(102, 20);
             this.lblDaysEarlier.TabIndex = 0;
             this.lblDaysEarlier.Text = "days earlier at";
             // 
             // dtpDailyTime
             // 
             this.dtpDailyTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpDailyTime.Location = new System.Drawing.Point(143, 3);
+            this.dtpDailyTime.Location = new System.Drawing.Point(166, 3);
             this.dtpDailyTime.Name = "dtpDailyTime";
             this.dtpDailyTime.ShowUpDown = true;
-            this.dtpDailyTime.Size = new System.Drawing.Size(122, 23);
+            this.dtpDailyTime.Size = new System.Drawing.Size(122, 27);
             this.dtpDailyTime.TabIndex = 1;
             // 
             // flowLayoutPanel5
@@ -1359,9 +1361,9 @@
             // 
             this.lblWeeklyEvery.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblWeeklyEvery.AutoSize = true;
-            this.lblWeeklyEvery.Location = new System.Drawing.Point(3, 7);
+            this.lblWeeklyEvery.Location = new System.Drawing.Point(3, 5);
             this.lblWeeklyEvery.Name = "lblWeeklyEvery";
-            this.lblWeeklyEvery.Size = new System.Drawing.Size(35, 15);
+            this.lblWeeklyEvery.Size = new System.Drawing.Size(44, 20);
             this.lblWeeklyEvery.TabIndex = 6;
             this.lblWeeklyEvery.Text = "Every";
             // 
@@ -1376,28 +1378,28 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.cboWeeklyDay.Location = new System.Drawing.Point(44, 3);
+            this.cboWeeklyDay.Location = new System.Drawing.Point(53, 3);
             this.cboWeeklyDay.Name = "cboWeeklyDay";
-            this.cboWeeklyDay.Size = new System.Drawing.Size(131, 23);
+            this.cboWeeklyDay.Size = new System.Drawing.Size(131, 28);
             this.cboWeeklyDay.TabIndex = 0;
             // 
             // lblWeeklyAt
             // 
             this.lblWeeklyAt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblWeeklyAt.AutoSize = true;
-            this.lblWeeklyAt.Location = new System.Drawing.Point(181, 7);
+            this.lblWeeklyAt.Location = new System.Drawing.Point(190, 5);
             this.lblWeeklyAt.Name = "lblWeeklyAt";
-            this.lblWeeklyAt.Size = new System.Drawing.Size(17, 15);
+            this.lblWeeklyAt.Size = new System.Drawing.Size(22, 20);
             this.lblWeeklyAt.TabIndex = 4;
             this.lblWeeklyAt.Text = "at";
             // 
             // dtpWeeklyTime
             // 
             this.dtpWeeklyTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpWeeklyTime.Location = new System.Drawing.Point(204, 3);
+            this.dtpWeeklyTime.Location = new System.Drawing.Point(3, 34);
             this.dtpWeeklyTime.Name = "dtpWeeklyTime";
             this.dtpWeeklyTime.ShowUpDown = true;
-            this.dtpWeeklyTime.Size = new System.Drawing.Size(131, 23);
+            this.dtpWeeklyTime.Size = new System.Drawing.Size(131, 27);
             this.dtpWeeklyTime.TabIndex = 5;
             // 
             // flowLayoutPanel6
@@ -1415,15 +1417,15 @@
             // 
             this.lblMonthlyOnDay.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMonthlyOnDay.AutoSize = true;
-            this.lblMonthlyOnDay.Location = new System.Drawing.Point(3, 7);
+            this.lblMonthlyOnDay.Location = new System.Drawing.Point(3, 6);
             this.lblMonthlyOnDay.Name = "lblMonthlyOnDay";
-            this.lblMonthlyOnDay.Size = new System.Drawing.Size(45, 15);
+            this.lblMonthlyOnDay.Size = new System.Drawing.Size(56, 20);
             this.lblMonthlyOnDay.TabIndex = 0;
             this.lblMonthlyOnDay.Text = "On day";
             // 
             // numMonthlyDay
             // 
-            this.numMonthlyDay.Location = new System.Drawing.Point(54, 3);
+            this.numMonthlyDay.Location = new System.Drawing.Point(65, 3);
             this.numMonthlyDay.Maximum = new decimal(new int[] {
             31,
             0,
@@ -1435,7 +1437,7 @@
             0,
             0});
             this.numMonthlyDay.Name = "numMonthlyDay";
-            this.numMonthlyDay.Size = new System.Drawing.Size(61, 23);
+            this.numMonthlyDay.Size = new System.Drawing.Size(61, 27);
             this.numMonthlyDay.TabIndex = 2;
             this.numMonthlyDay.Value = new decimal(new int[] {
             1,
@@ -1447,37 +1449,37 @@
             // 
             this.lblMonthlyAt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMonthlyAt.AutoSize = true;
-            this.lblMonthlyAt.Location = new System.Drawing.Point(121, 7);
+            this.lblMonthlyAt.Location = new System.Drawing.Point(132, 6);
             this.lblMonthlyAt.Name = "lblMonthlyAt";
-            this.lblMonthlyAt.Size = new System.Drawing.Size(17, 15);
+            this.lblMonthlyAt.Size = new System.Drawing.Size(22, 20);
             this.lblMonthlyAt.TabIndex = 3;
             this.lblMonthlyAt.Text = "at";
             // 
             // dtpMonthlyTime
             // 
             this.dtpMonthlyTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpMonthlyTime.Location = new System.Drawing.Point(144, 3);
+            this.dtpMonthlyTime.Location = new System.Drawing.Point(160, 3);
             this.dtpMonthlyTime.Name = "dtpMonthlyTime";
             this.dtpMonthlyTime.ShowUpDown = true;
-            this.dtpMonthlyTime.Size = new System.Drawing.Size(136, 23);
+            this.dtpMonthlyTime.Size = new System.Drawing.Size(136, 27);
             this.dtpMonthlyTime.TabIndex = 1;
             // 
             // cboScheduleModem
             // 
             this.cboScheduleModem.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboScheduleModem.FormattingEnabled = true;
-            this.cboScheduleModem.Location = new System.Drawing.Point(178, 166);
+            this.cboScheduleModem.Location = new System.Drawing.Point(178, 164);
             this.cboScheduleModem.Name = "cboScheduleModem";
-            this.cboScheduleModem.Size = new System.Drawing.Size(287, 23);
+            this.cboScheduleModem.Size = new System.Drawing.Size(287, 28);
             this.cboScheduleModem.TabIndex = 18;
             // 
             // cboScheduleSubCategory
             // 
             this.cboScheduleSubCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboScheduleSubCategory.FormattingEnabled = true;
-            this.cboScheduleSubCategory.Location = new System.Drawing.Point(178, 101);
+            this.cboScheduleSubCategory.Location = new System.Drawing.Point(178, 99);
             this.cboScheduleSubCategory.Name = "cboScheduleSubCategory";
-            this.cboScheduleSubCategory.Size = new System.Drawing.Size(287, 23);
+            this.cboScheduleSubCategory.Size = new System.Drawing.Size(287, 28);
             this.cboScheduleSubCategory.TabIndex = 7;
             // 
             // lblScheduleSubCategory
@@ -1485,9 +1487,9 @@
             this.lblScheduleSubCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleSubCategory.AutoSize = true;
             this.lblScheduleSubCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleSubCategory.Location = new System.Drawing.Point(95, 105);
+            this.lblScheduleSubCategory.Location = new System.Drawing.Point(77, 102);
             this.lblScheduleSubCategory.Name = "lblScheduleSubCategory";
-            this.lblScheduleSubCategory.Size = new System.Drawing.Size(77, 13);
+            this.lblScheduleSubCategory.Size = new System.Drawing.Size(95, 19);
             this.lblScheduleSubCategory.TabIndex = 2;
             this.lblScheduleSubCategory.Text = "Sub category:";
             // 
@@ -1496,9 +1498,9 @@
             this.lblScheduleCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleCategory.AutoSize = true;
             this.lblScheduleCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleCategory.Location = new System.Drawing.Point(115, 73);
+            this.lblScheduleCategory.Location = new System.Drawing.Point(103, 70);
             this.lblScheduleCategory.Name = "lblScheduleCategory";
-            this.lblScheduleCategory.Size = new System.Drawing.Size(57, 13);
+            this.lblScheduleCategory.Size = new System.Drawing.Size(69, 19);
             this.lblScheduleCategory.TabIndex = 1;
             this.lblScheduleCategory.Text = "Category:";
             // 
@@ -1508,18 +1510,18 @@
             this.cboScheduleCategory.FormattingEnabled = true;
             this.cboScheduleCategory.Items.AddRange(new object[] {
             "Appointments"});
-            this.cboScheduleCategory.Location = new System.Drawing.Point(178, 69);
+            this.cboScheduleCategory.Location = new System.Drawing.Point(178, 67);
             this.cboScheduleCategory.Name = "cboScheduleCategory";
-            this.cboScheduleCategory.Size = new System.Drawing.Size(287, 23);
+            this.cboScheduleCategory.Size = new System.Drawing.Size(287, 28);
             this.cboScheduleCategory.TabIndex = 6;
             this.cboScheduleCategory.SelectedIndexChanged += new System.EventHandler(this.cboScheduleCategory_SelectedIndexChanged);
             // 
             // txtScheduleName
             // 
             this.txtScheduleName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtScheduleName.Location = new System.Drawing.Point(178, 36);
+            this.txtScheduleName.Location = new System.Drawing.Point(178, 35);
             this.txtScheduleName.Name = "txtScheduleName";
-            this.txtScheduleName.Size = new System.Drawing.Size(287, 23);
+            this.txtScheduleName.Size = new System.Drawing.Size(287, 27);
             this.txtScheduleName.TabIndex = 5;
             // 
             // lblScheduleName
@@ -1527,9 +1529,9 @@
             this.lblScheduleName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleName.AutoSize = true;
             this.lblScheduleName.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleName.Location = new System.Drawing.Point(86, 41);
+            this.lblScheduleName.Location = new System.Drawing.Point(65, 38);
             this.lblScheduleName.Name = "lblScheduleName";
-            this.lblScheduleName.Size = new System.Drawing.Size(86, 13);
+            this.lblScheduleName.Size = new System.Drawing.Size(107, 19);
             this.lblScheduleName.TabIndex = 0;
             this.lblScheduleName.Text = "Schedule name:";
             // 
@@ -1538,19 +1540,19 @@
             this.lblScheduleID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblScheduleID.AutoSize = true;
             this.lblScheduleID.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduleID.Location = new System.Drawing.Point(103, 9);
+            this.lblScheduleID.Location = new System.Drawing.Point(85, 6);
             this.lblScheduleID.Name = "lblScheduleID";
-            this.lblScheduleID.Size = new System.Drawing.Size(69, 13);
+            this.lblScheduleID.Size = new System.Drawing.Size(87, 19);
             this.lblScheduleID.TabIndex = 19;
             this.lblScheduleID.Text = "Schedule ID:";
             // 
             // txtScheduleID
             // 
             this.txtScheduleID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtScheduleID.Location = new System.Drawing.Point(178, 4);
+            this.txtScheduleID.Location = new System.Drawing.Point(178, 3);
             this.txtScheduleID.Name = "txtScheduleID";
             this.txtScheduleID.ReadOnly = true;
-            this.txtScheduleID.Size = new System.Drawing.Size(287, 23);
+            this.txtScheduleID.Size = new System.Drawing.Size(287, 27);
             this.txtScheduleID.TabIndex = 20;
             // 
             // flowLayoutPanel7
@@ -1606,7 +1608,7 @@
             this.dgvSchedules.Name = "dgvSchedules";
             this.dgvSchedules.ReadOnly = true;
             this.dgvSchedules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedules.Size = new System.Drawing.Size(1061, 157);
+            this.dgvSchedules.Size = new System.Drawing.Size(1061, 152);
             this.dgvSchedules.TabIndex = 2;
             this.dgvSchedules.SelectionChanged += new System.EventHandler(this.dgvSchedules_SelectionChanged);
             // 
@@ -1642,6 +1644,7 @@
             // spcMain.Panel1
             // 
             this.spcMain.Panel1.BackColor = System.Drawing.Color.White;
+            this.spcMain.Panel1.Controls.Add(this.piclogo);
             this.spcMain.Panel1.Controls.Add(this.picMessaging);
             // 
             // spcMain.Panel2
@@ -1651,6 +1654,17 @@
             this.spcMain.SplitterDistance = 60;
             this.spcMain.SplitterWidth = 1;
             this.spcMain.TabIndex = 4;
+            // 
+            // piclogo
+            // 
+            this.piclogo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.piclogo.Location = new System.Drawing.Point(947, 0);
+            this.piclogo.Margin = new System.Windows.Forms.Padding(0);
+            this.piclogo.Name = "piclogo";
+            this.piclogo.Size = new System.Drawing.Size(136, 60);
+            this.piclogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.piclogo.TabIndex = 3;
+            this.piclogo.TabStop = false;
             // 
             // picMessaging
             // 
@@ -1667,7 +1681,7 @@
             // 
             // ucMessaging
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.spcMain);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1736,6 +1750,7 @@
             this.spcMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spcMain)).EndInit();
             this.spcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.piclogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMessaging)).EndInit();
             this.ResumeLayout(false);
 
@@ -1865,5 +1880,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button cmdSend;
         private System.Windows.Forms.Button cmdClearAll;
+        private System.Windows.Forms.PictureBox piclogo;
     }
 }

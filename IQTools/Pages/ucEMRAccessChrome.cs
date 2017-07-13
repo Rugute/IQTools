@@ -90,11 +90,11 @@ namespace IQTools.Pages
 
         //private void ucEMRAccessChrome_Enter(object sender, EventArgs e)
         //{
-        //    if (clsGbl.PMMS.ToLower() == "iqcare")
+        //    if (emrType == "iqcare")
         //    {
         //        navigateIQCare();
         //    }
-        //    else if (clsGbl.PMMS.ToLower() == "isante")
+        //    else if (emrType == "isante")
         //    {
         //        navigateISante();
         //    }

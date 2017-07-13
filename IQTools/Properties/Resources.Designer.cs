@@ -63,49 +63,9 @@ namespace IQTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CCSA {
+        internal static System.Drawing.Bitmap icap_logo {
             get {
-                object obj = ResourceManager.GetObject("CCSA", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Excel {
-            get {
-                object obj = ResourceManager.GetObject("Excel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap excel1 {
-            get {
-                object obj = ResourceManager.GetObject("excel1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap futuresbanner {
-            get {
-                object obj = ResourceManager.GetObject("futuresbanner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FuturesCollage {
-            get {
-                object obj = ResourceManager.GetObject("FuturesCollage", resourceCulture);
+                object obj = ResourceManager.GetObject("icap_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -175,16 +135,6 @@ namespace IQTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IQToolsNet {
-            get {
-                object obj = ResourceManager.GetObject("IQToolsNet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap isante_ht {
             get {
                 object obj = ResourceManager.GetObject("isante_ht", resourceCulture);
@@ -235,9 +185,9 @@ namespace IQTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search_server_16x16 {
+        internal static System.Drawing.Bitmap right {
             get {
-                object obj = ResourceManager.GetObject("search_server_16x16", resourceCulture);
+                object obj = ResourceManager.GetObject("right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -248,6 +198,16 @@ namespace IQTools.Properties {
         internal static System.Drawing.Bitmap search2020 {
             get {
                 object obj = ResourceManager.GetObject("search2020", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wrong {
+            get {
+                object obj = ResourceManager.GetObject("wrong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

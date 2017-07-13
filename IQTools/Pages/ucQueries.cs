@@ -15,7 +15,7 @@ using ActiveDatabaseSoftware.ActiveQueryBuilder;
 using MySql.Data.MySqlClient;
 using System.Collections;
 using System.Configuration;
-using Npgsql;
+
 
 namespace IQTools.Pages
 {
@@ -89,12 +89,12 @@ namespace IQTools.Pages
       {
         queryBuilder1.SQL = sqlTextEditor1.Text;
         qb.SQL = sqlTextEditor1.Text;
+        
       }
       catch (Exception ex)
       {
         MessageBox.Show ( ex.Message, "Parsing error" );
       }
-
     }
 
     private void plainTextSQLBuilder1_SQLUpdated ( object sender, EventArgs e )
@@ -117,7 +117,7 @@ namespace IQTools.Pages
         queryBuilder1.SyntaxProvider = syntaxProvider;
         queryBuilder1.MetadataProvider = metadataProvider;
         qb.SyntaxProvider = syntaxProvider;
-
+        qb.MetadataProvider = metadataProvider;
       }
       else if (serverType.ToLower ( ) == "mysql")
       {
@@ -132,14 +132,17 @@ namespace IQTools.Pages
       }
       else if (serverType.ToLower() == "pgsql")
       {
-          NpgsqlConnection pgsqlConn = (NpgsqlConnection)Entity.GetConnection(iqtoolsConnString, "pgsql");
-          PostgreSQLSyntaxProvider pgsqlSyntaxProvider = new PostgreSQLSyntaxProvider();
-          UniversalMetadataProvider umdprovider = new UniversalMetadataProvider();
+          //NpgsqlConnection pgsqlConn = (NpgsqlConnection)Entity.GetConnection(iqtoolsConnString, "pgsql");
+          //PostgreSQLSyntaxProvider pgsqlSyntaxProvider = new PostgreSQLSyntaxProvider();
+          ////UniversalSyntaxProvider uSyntaxProvider = new UniversalSyntaxProvider();
+          //UniversalMetadataProvider umdprovider = new UniversalMetadataProvider();
 
-          umdprovider.Connection = pgsqlConn;
-          queryBuilder1.SyntaxProvider = pgsqlSyntaxProvider;
-          queryBuilder1.MetadataProvider = umdprovider;
-          qb.SyntaxProvider = pgsqlSyntaxProvider;
+          //umdprovider.Connection = pgsqlConn;
+          //queryBuilder1.SyntaxProvider = pgsqlSyntaxProvider;
+          ////queryBuilder1.SyntaxProvider = uSyntaxProvider;
+          //queryBuilder1.MetadataProvider = umdprovider;
+          //qb.SyntaxProvider = pgsqlSyntaxProvider;
+          ////qb.SyntaxProvider = uSyntaxProvider;
 
       }
 
@@ -319,40 +322,40 @@ namespace IQTools.Pages
 
       else if (server == "pgsql")
       {
-          //MySqlCommand cmd = new MySqlCommand(qb.SQL);
-          NpgsqlCommand cmd = new NpgsqlCommand(qb.SQL);
+          ////MySqlCommand cmd = new MySqlCommand(qb.SQL);
+          //NpgsqlCommand cmd = new NpgsqlCommand(qb.SQL);
 
-          if (qb.Parameters.Count > 0)
-          {
-              Hashtable myParameters = new Hashtable(); int j = 0; myParameters.Clear();
-              for (int i = 0; i < qb.Parameters.Count; i++)
-              {
-                  j = 0;
+          //if (qb.Parameters.Count > 0)
+          //{
+          //    Hashtable myParameters = new Hashtable(); int j = 0; myParameters.Clear();
+          //    for (int i = 0; i < qb.Parameters.Count; i++)
+          //    {
+          //        j = 0;
 
-                  NpgsqlParameter p = new NpgsqlParameter();
-                  p.ParameterName = qb.Parameters[i].FullName;
-                  p.DbType = qb.Parameters[i].DataType;
-                  foreach (DictionaryEntry de in myParameters)
-                  {
-                      if (de.Key.ToString().Trim().ToLower() == qb.Parameters[i].FullName.Trim().ToLower())
-                      {
-                          j = 1;
-                          break;
-                      }
-                  }
-                  if (j == 0)
-                  {
-                      cmd.Parameters.Add(p);
-                      myParameters.Add(p.ParameterName, p.DbType);
-                  }
-              }
+          //        NpgsqlParameter p = new NpgsqlParameter();
+          //        p.ParameterName = qb.Parameters[i].FullName;
+          //        p.DbType = qb.Parameters[i].DataType;
+          //        foreach (DictionaryEntry de in myParameters)
+          //        {
+          //            if (de.Key.ToString().Trim().ToLower() == qb.Parameters[i].FullName.Trim().ToLower())
+          //            {
+          //                j = 1;
+          //                break;
+          //            }
+          //        }
+          //        if (j == 0)
+          //        {
+          //            cmd.Parameters.Add(p);
+          //            myParameters.Add(p.ParameterName, p.DbType);
+          //        }
+          //    }
 
-              using (frmQueryParameters qp = new frmQueryParameters(qb.Parameters, cmd))
-              {
-                  qp.StartPosition = FormStartPosition.CenterScreen;
-                  qp.ShowDialog();
-              }
-          }
+          //    using (frmQueryParameters qp = new frmQueryParameters(qb.Parameters, cmd))
+          //    {
+          //        qp.StartPosition = FormStartPosition.CenterScreen;
+          //        qp.ShowDialog();
+          //    }
+          //}
       }
 
     }
@@ -711,6 +714,11 @@ namespace IQTools.Pages
             SetControlPropertyThreadSafe(fMain.picProgress, "Image", null);
             SetControlPropertyThreadSafe(fMain.lblNotify, "Text", "Successfully Exported");
         }
+
+    }
+
+    private void spcDesignQuery_Panel1_Paint(object sender, PaintEventArgs e)
+    {
 
     }       
 

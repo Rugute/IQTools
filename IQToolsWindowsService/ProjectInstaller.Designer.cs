@@ -39,9 +39,9 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "IQTools Service";
-            this.serviceInstaller1.DisplayName = "IQTools Service";
-            this.serviceInstaller1.ServiceName = "IQTools";
+            this.serviceInstaller1.Description = "IQTools Auto-Update Service";
+            this.serviceInstaller1.DisplayName = "IQTools Auto-Update Service";
+            this.serviceInstaller1.ServiceName = "IQTools Auto-Update Service";
             // 
             // ProjectInstaller
             // 

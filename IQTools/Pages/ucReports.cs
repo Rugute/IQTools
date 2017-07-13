@@ -12,6 +12,8 @@ using BusinessLayer;
 using System.Collections;
 using System.Threading;
 using System.Reflection;
+using System.Xml;
+using System.Data.SqlClient;
 
 namespace IQTools.Pages
 {
@@ -27,6 +29,13 @@ namespace IQTools.Pages
         DataRow r;
         bool bySatellite = false;
         bool linelists = false;
+        //For Sending data to DHIS2 ADX
+        RadioButton dhis = new RadioButton();
+        RadioButton adx = new RadioButton();
+        public DataTable DHISADX;
+        public string MFLCode;
+        string DHISReport;
+        Entity theObject; Hashtable myParameters;
 
         public ucReports(frmMain frm)
         {
@@ -48,63 +57,149 @@ namespace IQTools.Pages
             {
                 reportsDS = (DataSet)en.ReturnObject(iqtoolsConnString
                     , ClsUtility.theParams, sp, ClsUtility.ObjectEnum.DataSet, server);
-                cboSelectReport.DataSource = new BindingSource(reportsDS.Tables[0], null);
-                cboSelectReport.DisplayMember = "ReportDisplayName";
-                cboSelectReport.ValueMember = "ReportID";
+                //cboSelectReport.DataSource = new BindingSource(reportsDS.Tables[0], null);
+                //cboSelectReport.DisplayMember = "ReportDisplayName";
+                //cboSelectReport.ValueMember = "ReportID";
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+
+            //
+            try
+            {
+                
+                //tlPSelectReport.RowCount += 1;
+                //DataTableReader dr = reportsDS.Tables[0].CreateDataReader();
+                DataTableReader groups = reportsDS.Tables[7].CreateDataReader();
+                while (groups.Read())
+                {
+                    //tlPSelectReport.RowCount = tlPSelectReport.RowCount + 1;                    
+                    //RadioButton rd = new RadioButton();
+                    //rd.CheckedChanged += new EventHandler(Rd_CheckedChanged);
+                    ////rd.Size.Width = 
+                    //rd.Name = dr["ReportName"].ToString();
+                    //rd.Text = dr["ReportDisplayName"].ToString();
+                    //rd.TabIndex = Convert.ToInt16(dr["ReportID"].ToString());
+                    //rd.AutoSize = true;
+                    //rd.ForeColor = Color.SteelBlue;
+                    //tlPSelectReport.Controls.Add(rd, 1, tlPSelectReport.RowCount);
+                    Label partition = new Label();
+                    //Partition?
+                    tlPSelectReport.RowCount = tlPSelectReport.RowCount + 1;
+                    
+                    partition.Text = groups["GroupName"].ToString();
+                    partition.ForeColor = Color.DarkGreen;
+                    
+                    partition.Anchor = AnchorStyles.Left;
+                    partition.AutoSize = true;
+
+                    tlPSelectReport.Controls.Add(partition, 1, tlPSelectReport.RowCount);
+                    DataTable currentGroup = reportsDS.Tables[0].DefaultView.ToTable();
+                    currentGroup.DefaultView.RowFilter = "GroupName = '" + groups["GroupName"].ToString() + "'";
+                    currentGroup = currentGroup.DefaultView.ToTable();
+                    DataTableReader dr = currentGroup.CreateDataReader();
+                    while (dr.Read())
+                    {
+                        tlPSelectReport.RowCount = tlPSelectReport.RowCount + 1;
+                        RadioButton rd = new RadioButton();
+                        rd.CheckedChanged += new EventHandler(Rd_CheckedChanged);
+                        rd.Name = dr["ReportName"].ToString();
+                        rd.Text = dr["ReportDisplayName"].ToString();
+                        rd.TabIndex = Convert.ToInt16(dr["ReportID"].ToString());
+                        rd.AutoSize = true;
+                        rd.ForeColor = Color.SteelBlue;
+                        tlPSelectReport.Controls.Add(rd, 1, tlPSelectReport.RowCount);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            //
         }
-       
-        private void cboSelectReport_SelectionChangeCommitted(object sender, EventArgs e)
+
+        private void Rd_CheckedChanged(object sender, EventArgs e)
         {
-            string reportID = cboSelectReport.SelectedValue.ToString();
+            RadioButton r = (RadioButton)sender;
+            if (r.Checked)
+                GetReport(r.TabIndex);
+        }
+
+        private void GetReport(int reportID)
+        {
             DataTable selectedReport = new DataTable();
             selectedReport = reportsDS.Tables[0].DefaultView.ToTable();
             selectedReport.DefaultView.RowFilter = "ReportID = " + reportID;
             selectedReport = selectedReport.DefaultView.ToTable();
 
             r = selectedReport.Rows[0];
-            lblReportDescription.Text = r["ReportDescription"].ToString();
+          
+            //    //lblReportDescription.Text = r["ReportDescription"].ToString();
 
-            getExistingReports(reportID); 
+            //    getExistingReports(reportID); 
 
             reportParameters = reportsDS.Tables[1].DefaultView.ToTable();
             reportParameters.DefaultView.RowFilter = "ReportID = " + reportID;
             reportParameters = reportParameters.DefaultView.ToTable();
-            
+
 
             satellites = reportsDS.Tables[5].DefaultView.ToTable();
-          
+
             createParameterControls(reportParameters);
 
             populateReportResources(reportID);
         }
 
+        //private void cboSelectReport_SelectionChangeCommitted(object sender, EventArgs e)
+        //{
+        //    string reportID = cboSelectReport.SelectedValue.ToString();
+        //    DataTable selectedReport = new DataTable();
+        //    selectedReport = reportsDS.Tables[0].DefaultView.ToTable();
+        //    selectedReport.DefaultView.RowFilter = "ReportID = " + reportID;
+        //    selectedReport = selectedReport.DefaultView.ToTable();
+
+        //    r = selectedReport.Rows[0];
+        //    //lblReportDescription.Text = r["ReportDescription"].ToString();
+
+        //    getExistingReports(reportID); 
+
+        //    reportParameters = reportsDS.Tables[1].DefaultView.ToTable();
+        //    reportParameters.DefaultView.RowFilter = "ReportID = " + reportID;
+        //    reportParameters = reportParameters.DefaultView.ToTable();
+
+
+        //    satellites = reportsDS.Tables[5].DefaultView.ToTable();
+
+        //    createParameterControls(reportParameters);
+
+        //    populateReportResources(reportID);
+        //}
+
         private void getExistingReports(string ReportID)
         {
-            dgvReports.DataSource = null;
-            try
-            {
-                DataTable selectedReport = reportsDS.Tables[4].DefaultView.ToTable();
-                selectedReport.DefaultView.RowFilter = "ReportID = " + ReportID;
-                selectedReport = selectedReport.DefaultView.ToTable();
-                dgvReports.DataSource = selectedReport;
-                DataGridViewLinkColumn dgvlc = new DataGridViewLinkColumn();
-                dgvlc.DataPropertyName = "ReportLink";
-                dgvlc.Name = "Report_Link";
-                dgvlc.HeaderText = "Click To Open The Report";
-                dgvReports.Columns.Add(dgvlc);
-                dgvReports.Columns["ReportLink"].Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //dgvReports.DataSource = null;
+            //try
+            //{
+            //    DataTable selectedReport = reportsDS.Tables[4].DefaultView.ToTable();
+            //    selectedReport.DefaultView.RowFilter = "ReportID = " + ReportID;
+            //    selectedReport = selectedReport.DefaultView.ToTable();
+            //    dgvReports.DataSource = selectedReport;
+            //    DataGridViewLinkColumn dgvlc = new DataGridViewLinkColumn();
+            //    dgvlc.DataPropertyName = "ReportLink";
+            //    dgvlc.Name = "Report_Link";
+            //    dgvlc.HeaderText = "Click To Open The Report";
+            //    dgvReports.Columns.Add(dgvlc);
+            //    dgvReports.Columns["ReportLink"].Visible = false;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
         
         private void createParameterControls(DataTable parameters)
-        {            
+        {    
             tlPParameters.Controls.Clear();
             DataTableReader paramReader = parameters.CreateDataReader();
             string paramType = String.Empty;
@@ -177,6 +272,7 @@ namespace IQTools.Pages
                             l.Margin = margin;
                             l.AutoSize = true;
                             tlPParameters.Controls.Add(l);
+                           
 
                             //IQToolsDateHelper dh = new IQToolsDateHelper();
                             dh.cboDateRanges.SelectedIndexChanged += new EventHandler(cboDateRanges_SelectedIndexChanged);
@@ -185,9 +281,14 @@ namespace IQTools.Pages
                             dh.Dock = DockStyle.Top;
                             //dh.lstPeriods.SelectedIndexChanged += new EventHandler(lstPeriods_SelectedIndexChanged);
                             tlPParameters.Controls.Add(dh);
+
+                            
+
                         }
 
                     }
+                    
+
                     //Add a Last Row. Should be some kind of footer
                     Label end = new Label();
                     //end.Text = "_";
@@ -259,18 +360,18 @@ namespace IQTools.Pages
             populateDatePeriods();
         }
 
-        private void dgvReports_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (this.dgvReports.Columns[e.ColumnIndex] is DataGridViewLinkColumn)
-            {
-                string reportLocation = this.dgvReports[e.ColumnIndex, e.RowIndex].Value.ToString();
-                if (reportLocation != String.Empty)
-                {
-                    //MessageBox.Show(reportLocation);
-                    System.Diagnostics.Process.Start(reportLocation);
-                }
-            }
-        }
+        //private void dgvReports_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (this.dgvReports.Columns[e.ColumnIndex] is DataGridViewLinkColumn)
+        //    {
+        //        string reportLocation = this.dgvReports[e.ColumnIndex, e.RowIndex].Value.ToString();
+        //        if (reportLocation != String.Empty)
+        //        {
+        //            //MessageBox.Show(reportLocation);
+        //            System.Diagnostics.Process.Start(reportLocation);
+        //        }
+        //    }
+        //}
 
         private void populateDatePeriods()
         {
@@ -369,7 +470,23 @@ namespace IQTools.Pages
                 
                 Hashtable rh = setParameters();
                 ReportsManager RM = new ReportsManager();
-                RM.runReport(rh,satellites,bySatellite);
+                RM.runReport(rh,satellites,bySatellite,linelists);
+                if (adx.Checked == true)
+                {
+                    dhis.Checked = false;
+                    createDHIS2XMLFileADX();
+                    frmDHISPassword DHIS2PW = new frmDHISPassword();
+                    DialogResult dr = DHIS2PW.ShowDialog();
+                    //if (dr == DialogResult.Cancel) 
+                    //    return false;
+                    //return true;
+                }
+                else if (dhis.Checked == true)
+                {
+                    adx.Checked = false; 
+                    frmDHISPassword DHIS2PW = new frmDHISPassword();
+                    DialogResult dr = DHIS2PW.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
@@ -380,6 +497,7 @@ namespace IQTools.Pages
                 SetControlPropertyThreadSafe(fMain.picProgress, "Image", null);
                 SetControlPropertyThreadSafe(fMain.lblNotify, "Text", "");
                 SetControlPropertyThreadSafe(this.btnGenerateReport, "Enabled", true);
+                //dhis.Checked = false;
             }
         }
 
@@ -405,8 +523,9 @@ namespace IQTools.Pages
             rh.Add("ReportName", r["ReportName"].ToString());
             rh.Add("ExcelTemplateName", r["ExcelTemplateName"].ToString());
             rh.Add("ExcelWorksheetName", r["ExcelWorksheetName"].ToString());
+            rh.Add("GroupName", r["GroupName"].ToString());
             ClsUtility.Init_Hashtable();
-
+            DHISReport = r["ReportName"].ToString();
             foreach (Control c in tlPParameters.Controls)
             {               
                 if (c.GetType().ToString().ToLower().Contains("checkbox"))
@@ -440,7 +559,7 @@ namespace IQTools.Pages
                 }
                 
             }
-
+     
             return rh;
         }
 
@@ -470,14 +589,96 @@ namespace IQTools.Pages
             }
 
         }
+        public XmlDocument createDHIS2XMLFileADX()
+        {
+            theObject = new Entity();
+            DateTimeOffset localDate = new DateTimeOffset(DateTime.Now, TimeZoneInfo.Local.GetUtcOffset(DateTime.Now));
+            //DateTime localDate = DateTime.Now;
+            DHISADX = (DataTable)(theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, "SELECT CatID FROM aa_Category WHERE Category = 'MoH731'", ClsUtility.ObjectEnum.DataTable, clsGbl.PMMSType));
 
-        private void populateReportResources(string reportID)
+
+            XmlTextWriter xtw = new XmlTextWriter("C:\\Cohort\\MoH_731_ADX.xml", System.Text.Encoding.UTF8);
+            xtw.WriteStartDocument(true);
+            xtw.Formatting = Formatting.Indented;
+            xtw.Indentation = 2;
+
+            xtw.WriteStartElement("adx");
+
+            xtw.WriteAttributeString("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+            xtw.WriteAttributeString("xmlns", "urn:ihe:qrph:adx:2015");
+            xtw.WriteAttributeString("xsi:schemaLocation", "urn:ihe:qrph:adx:2015../schema/adx_loose.xsd");
+
+            //xtw.WriteAttributeString("exported", DateTime.Now.Date.ToString("yyyy-MM-dd"));
+            xtw.WriteAttributeString("exported", localDate.ToString("o"));
+
+            xtw.WriteStartElement("group");
+            xtw.WriteAttributeString("dataSet", "MOH_731-3");
+            xtw.WriteAttributeString("Period", dh.dtpFromDate.Value.ToString("yyyy-MM-dd HH"));
+            xtw.WriteAttributeString("orgUnit", "12516");//remember to replace with Facility ID
+
+            string connectionstring;
+            connectionstring = Entity.getconnString(clsGbl.xmlPath);
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("[dbo].[pr_MOH731ADX2]", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@FromDate", SqlDbType.DateTime).Value = dh.dtpFromDate.Value.ToString();
+            cmd.Parameters.Add("@ToDate", SqlDbType.DateTime).Value = dh.dtpToDate.Value.ToString();
+          
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(DHISADX);
+
+            foreach (DataRow row in DHISADX.Rows)
+            {
+                if (DHISADX.Rows.IndexOf(row) != 0)
+                {
+                    xtw.WriteStartElement("dataValue");
+                    xtw.WriteAttributeString("value", row["value"].ToString());
+                    xtw.WriteAttributeString("dataElement", row["dataElement"].ToString());
+                    xtw.WriteEndElement();
+                }
+            }
+
+            xtw.WriteEndElement();
+            xtw.WriteEndElement();
+            xtw.WriteEndDocument();
+            xtw.Close();
+
+            XmlDocument xld = new XmlDocument();
+            xld.Load(@"C:\\Cohort\\MoH_731_ADX.xml");
+            return xld;
+
+        
+
+        }
+        private void populateReportResources(int reportID)
         {
             lstReportResources.DataSource = null;
 
             DataTable selectedReport = reportsDS.Tables[6].DefaultView.ToTable();
             selectedReport.DefaultView.RowFilter = "ReportID = " + reportID;
-            selectedReport = selectedReport.DefaultView.ToTable(); 
+            selectedReport = selectedReport.DefaultView.ToTable();
+            if (reportID == 5)
+            {
+                // For DHIS 2 Sending data 
+                dhis.Name = "opt_KESendToDHIS2";
+                dhis.Text = "Send to DHIS 2";
+                dhis.Checked = false;
+                dhis.CheckAlign = ContentAlignment.MiddleLeft;
+                dhis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.None)));
+                tlPParameters.Controls.Add(dhis);
+                //c.Name = "chk" + paramReader["ParamName"].ToString();
+
+
+                // For ADX Data sending
+                adx.Name = "opt_KESendAsADX";
+                adx.Text = "Send as ADX";
+                adx.Checked = false;
+                adx.CheckAlign = ContentAlignment.MiddleLeft;
+                adx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+                tlPParameters.Controls.Add(adx);
+            }
 
             lstReportResources.DataSource = selectedReport;
             lstReportResources.DisplayMember = "DisplayName";
@@ -492,6 +693,10 @@ namespace IQTools.Pages
                 System.Diagnostics.Process.Start(lstReportResources.SelectedValue.ToString());
             }
         }
-    
+
+        private void lstReportResources_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

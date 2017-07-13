@@ -1,70 +1,128 @@
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.pdb
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\MySql.Data.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.dll
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.pdb
-C:\My Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.pdb
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\Mono.Security.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\MySql.Data.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\Npgsql.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\Npgsql.xml
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\de\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\es\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.dll
-C:\Users\LOmare\Documents\Projects\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.pdb
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.pdb
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\Mono.Security.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\MySql.Data.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\Npgsql.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\Npgsql.xml
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\de\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\es\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
-C:\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.dll
-C:\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.pdb
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\DataLayer.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\DataLayer.pdb
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\Mono.Security.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\MySql.Data.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\Npgsql.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\Npgsql.xml
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\de\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\es\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\obj\Debug\ResolveAssemblyReference.cache
-C:\IQToolsV3ADX\IQTools\DataLayer\obj\Debug\DataLayer.dll
-C:\IQToolsV3ADX\IQTools\DataLayer\obj\Debug\DataLayer.pdb
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\DataLayer.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\DataLayer.pdb
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\Mono.Security.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\MySql.Data.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\Npgsql.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\Npgsql.xml
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\de\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\es\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\fi\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\fr\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\ja\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\HMIS\Repository\IQTools\DataLayer\obj\Debug\DataLayer.dll
-C:\HMIS\Repository\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\bin\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\bin\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\bin\Debug\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\obj\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQTools\IQTools\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Christopher\Downloads\IQTools\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\IQTools\DataLayer\bin\Debug\DataLayer.dll
+C:\IQTools\DataLayer\bin\Debug\DataLayer.pdb
+C:\IQTools\DataLayer\bin\Debug\MySql.Data.dll
+C:\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\IQTools\DataLayer\obj\Debug\DataLayer.dll
+C:\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\Debug\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\Debug\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\Mono.Security.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\Npgsql.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\Npgsql.xml
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Christopher\Desktop\IQTools\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Mono.Security.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\MySqlBackup.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Npgsql.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\Npgsql.xml
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Christopher\OneDrive\IQTools Source\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\Revised Templates\New Tools\IQTools Source\IQTools Source\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Mono.Security.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\MySql.Data.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\MySqlBackup.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Npgsql.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\Npgsql.xml
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\de\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\es\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\LOmare\Desktop\IQTools Source\DataLayer\obj\Debug\DataLayer.pdb

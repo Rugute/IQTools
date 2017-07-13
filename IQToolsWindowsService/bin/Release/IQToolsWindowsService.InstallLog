@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.InstallLog
+   assemblypath = C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.exe
+Installing service IQTools...
+Service IQTools has been successfully installed.
+Creating EventLog source IQTools in log Application...
+Committing assembly 'C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.InstallLog
+   assemblypath = C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\IQToolsWindowsService\bin\Release\IQToolsWindowsService.exe

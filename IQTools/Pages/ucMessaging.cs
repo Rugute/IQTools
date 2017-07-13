@@ -17,8 +17,6 @@ using GsmComm.GsmCommunication;
 using ActiveDatabaseSoftware.ActiveQueryBuilder;
 using MySql.Data.MySqlClient;
 using System.Threading;
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Reflection;
 using System.Data.OleDb;
 using System.IO;
 
@@ -29,6 +27,7 @@ namespace IQTools.Pages
         Entity theObject = new Entity();
         DataTable theDt = new DataTable(); 
         DataTable theQryDT = new DataTable();
+        string emrType = Entity.GetEMRType();
         private string TzWbsUrl = "http://41.73.195.220/IQWebServices/IQMessaging.asmx";
         string sSQl = string.Empty;
         GsmCommMain comm;
@@ -64,8 +63,9 @@ namespace IQTools.Pages
             theDt.Clear();
             DataTableReader theDr;
 
-            theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, 
-                "SELECT DISTINCT sbCategory FROM aa_SBCategory  LEFT JOIN aa_Category ON aa_Category.CatID = aa_SBCategory.CatID "+
+            theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams,
+                "SELECT DISTINCT sbCategory FROM(SELECT DISTINCT sbCategory,Category FROM aa_SBCategory a LEFT JOIN aa_Category b ON b.CatID = a.CatID " +
+                "union SELECT DISTINCT sbCategory,Category FROM aa_UserSBCategory c LEFT JOIN aa_UserCategory d ON d.CatID = c.CatID) a " +
                 "WHERE Category='Messaging' Or Category='SMS'", 
                 ClsUtility.ObjectEnum.DataTable, Entity.getServerType(clsGbl.xmlPath));
             
@@ -97,10 +97,12 @@ namespace IQTools.Pages
                 cboSubCategory.Items.Clear();
                 theDt.Clear();
                 DataTableReader theDr;
-                theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, 
-                    "SELECT QryDescription FROM (aa_Queries LEFT JOIN aa_sbCategory ON aa_Queries.QryID=aa_sbCategory.QryID) "+
-                    "LEFT JOIN aa_Category ON aa_Category.CatID = aa_sbCategory.CatID WHERE "+
-                    " Category='Messaging' Or Category='SMS'", ClsUtility.ObjectEnum.DataTable, serverType);
+                theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams,
+                    "SELECT QryDescription FROM(SELECT QryDescription,Category FROM (aa_Queries LEFT JOIN aa_sbCategory ON aa_Queries.QryID=aa_sbCategory.QryID)  " +
+                    "LEFT JOIN aa_Category ON aa_Category.CatID = aa_sbCategory.CatID union  "+
+                    "SELECT QryDescription,Category FROM (aa_UserQueries a LEFT JOIN aa_UserSBCategory b ON a.QryID=b.QryID)  " +
+                    "LEFT JOIN aa_UserCategory c ON c.CatID = b.CatID ) a WHERE "+
+                    "Category='Messaging' Or Category='SMS'", ClsUtility.ObjectEnum.DataTable, serverType);
 
                 theDr = theDt.CreateDataReader();
                 while (theDr.Read())
@@ -229,7 +231,8 @@ namespace IQTools.Pages
             // get the query and populate the related query
             DataRow theDr; ClsUtility.Init_Hashtable();
             theDr = (DataRow)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams
-                , "SELECT DISTINCT QryName, QryDefinition FROM aa_Queries WHERE aa_Queries.QryDescription='" + cboSubCategory.Text + "'"
+                , "SELECT DISTINCT QryName, QryDefinition FROM (SELECT DISTINCT QryName, QryDefinition,QryDescription FROM aa_Queries " +
+                   "union SELECT DISTINCT QryName, QryDefinition,QryDescription FROM aa_UserQueries)a WHERE QryDescription='" + cboSubCategory.Text + "'"
                 , ClsUtility.ObjectEnum.DataRow, serverType);
 
             txtMessageToSend.Text = "";
@@ -305,24 +308,24 @@ namespace IQTools.Pages
             if (rbSendUsingWebServ.Checked)
             {
               //Send SMS through web service
-              TzWebReference.IQMessaging Tzservice = new TzWebReference.IQMessaging ( );
-              if (wbsConnected)
-              {
-                Thread SendSMSThread = new Thread ( ( ) => SendMsgUsingWbs ( dgvRecipients, txtMessageToSend.Text, txtCountryCode.Text, txtLogs, cmdSend, Tzservice ) );
-                SendSMSThread.SetApartmentState ( ApartmentState.STA );
-                try
-                {
-                  SendSMSThread.Start ( );
-                }
-                catch (Exception ex)
-                {
-                  MessageBox.Show ( ex.Message );
-                }
-               }
-               else
-               {
-                   MessageBox.Show(Assets.Messages.SMSInternetIssue, Assets.Messages.InfoHeader);
-               }
+              //TzWebReference.IQMessaging Tzservice = new TzWebReference.IQMessaging ( );
+              //if (wbsConnected)
+              //{
+              //  Thread SendSMSThread = new Thread ( ( ) => SendMsgUsingWbs ( dgvRecipients, txtMessageToSend.Text, txtCountryCode.Text, txtLogs, cmdSend, Tzservice ) );
+              //  SendSMSThread.SetApartmentState ( ApartmentState.STA );
+              //  try
+              //  {
+              //    SendSMSThread.Start ( );
+              //  }
+              //  catch (Exception ex)
+              //  {
+              //    MessageBox.Show ( ex.Message );
+              //  }
+              // }
+              // else
+              // {
+              //     MessageBox.Show(Assets.Messages.SMSInternetIssue, Assets.Messages.InfoHeader);
+              // }
             }
             else if (rbSendUsingModem.Checked)
             {
@@ -347,77 +350,77 @@ namespace IQTools.Pages
             }
         }
 
-        private void SendMsgUsingWbs ( DataGridView dgv, string msg, string countryCode, TextBox outputBox, Button sendButton, TzWebReference.IQMessaging Tzservice)
-        {
-          Cursor.Current = Cursors.WaitCursor;
-          string PatientPK= "";
+        //private void SendMsgUsingWbs ( DataGridView dgv, string msg, string countryCode, TextBox outputBox, Button sendButton, TzWebReference.IQMessaging Tzservice)
+        //{
+        //  Cursor.Current = Cursors.WaitCursor;
+        //  string PatientPK= "";
  
-          try
-          {
-            foreach (DataGridViewRow dr in dgv.Rows)
-            {
-              try
-              {
-                if (dr.Cells["Phone"].Value != null && dr.Selected )
-                {
-                  string pNum;
-                  if (dr.Cells["Phone"].Value.ToString ( ).Substring ( 0, 1 ) == "0" && countryCode.Length > 1)
-                  {
-                    pNum = countryCode.Trim ( ) + dr.Cells["Phone"].Value.ToString ( ).Substring ( 1 );
-                  }
-                  else if (dr.Cells["Phone"].Value.ToString ( ).Substring ( 0, 1 ) == "+")
-                  {
-                    pNum = dr.Cells["Phone"].Value.ToString ( );
-                  }
-                  else
-                  {
-                    pNum = "";
-                  }
+        //  try
+        //  {
+        //    foreach (DataGridViewRow dr in dgv.Rows)
+        //    {
+        //      try
+        //      {
+        //        if (dr.Cells["Phone"].Value != null && dr.Selected )
+        //        {
+        //          string pNum;
+        //          if (dr.Cells["Phone"].Value.ToString ( ).Substring ( 0, 1 ) == "0" && countryCode.Length > 1)
+        //          {
+        //            pNum = countryCode.Trim ( ) + dr.Cells["Phone"].Value.ToString ( ).Substring ( 1 );
+        //          }
+        //          else if (dr.Cells["Phone"].Value.ToString ( ).Substring ( 0, 1 ) == "+")
+        //          {
+        //            pNum = dr.Cells["Phone"].Value.ToString ( );
+        //          }
+        //          else
+        //          {
+        //            pNum = "";
+        //          }
 
-                  if (pNum != "")
-                  {
+        //          if (pNum != "")
+        //          {
               
-                    if (dr.Cells["PatientPK"].Value.ToString() != string.Empty)
-                    {
-                      PatientPK = dr.Cells["PatientPK"].Value.ToString ( );
-                    }
+        //            if (dr.Cells["PatientPK"].Value.ToString() != string.Empty)
+        //            {
+        //              PatientPK = dr.Cells["PatientPK"].Value.ToString ( );
+        //            }
                    
-                    //Use this when resending failed Messages
-                    if (msg.Trim ( ) == string.Empty)
-                    {
-                      msg = dr.Cells["Message"].Value.ToString ( );
-                    }
+        //            //Use this when resending failed Messages
+        //            if (msg.Trim ( ) == string.Empty)
+        //            {
+        //              msg = dr.Cells["Message"].Value.ToString ( );
+        //            }
  
-                    try
-                    {
-                      Tzservice.SendMessage(pNum,msg);
-                      LogMessage ( PatientPK, pNum, msg, MSG_SENT );
-                      UpdateProgress ( pNum + ": Message sent ", outputBox, sendButton, false );
-                    }
-                    catch (Exception ex)
-                    {
-                      LogMessage ( PatientPK, pNum, msg, MSG_FAILED );
-                      UpdateProgress ( pNum + ": Sending failed: " + ex.Message, outputBox, sendButton, false );
-                    }
+        //            try
+        //            {
+        //              Tzservice.SendMessage(pNum,msg);
+        //              LogMessage ( PatientPK, pNum, msg, MSG_SENT );
+        //              UpdateProgress ( pNum + ": Message sent ", outputBox, sendButton, false );
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //              LogMessage ( PatientPK, pNum, msg, MSG_FAILED );
+        //              UpdateProgress ( pNum + ": Sending failed: " + ex.Message, outputBox, sendButton, false );
+        //            }
 
-                  }
-                  else break;
-                }
-              }
-              catch
-              {
+        //          }
+        //          else break;
+        //        }
+        //      }
+        //      catch
+        //      {
 
-              }
-            }
-          }
-          catch (Exception ex)
-          {
-            UpdateProgress ( ex.Message, outputBox, sendButton, false );
-          }
+        //      }
+        //    }
+        //  }
+        //  catch (Exception ex)
+        //  {
+        //    UpdateProgress ( ex.Message, outputBox, sendButton, false );
+        //  }
 
-          UpdateProgress ( "", outputBox, sendButton, true );
+        //  UpdateProgress ( "", outputBox, sendButton, true );
 
-        }
+        //}
         private void SendMsgUsingModem(DataGridView dgv, string msg, string countryCode, TextBox outputBox, Button sendButton)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -917,7 +920,7 @@ namespace IQTools.Pages
                     txtNoOfRecords.Text = TblData.Rows.Count.ToString() + " Records";
 
                     //TODO DONE CHRIS IQCare Integration Modify - Only for IQCARE, Showing up in all EMRS//
-                    if (clsGbl.PMMS.ToLower() == "iqcare")
+                    if (emrType == "iqcare")
                     {
                         try
                         {
@@ -977,7 +980,7 @@ namespace IQTools.Pages
             }
             else if (clsGbl.PMMSType.ToLower() == "mysql")
             {
-                myCnn = (MySqlConnection)Entity.getdbConn((SqlConnection)Entity.GetConnection(Entity.getconnString(clsGbl.xmlPath), "mssql"), "iqtools");
+                //myCnn = (MySqlConnection)Entity.getdbConn((SqlConnection)Entity.GetConnection(Entity.getconnString(clsGbl.xmlPath), "mssql"), "iqtools");
             }
 
             try
@@ -1017,8 +1020,10 @@ namespace IQTools.Pages
 
             //Populate the category
             theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams,
-                "SELECT DISTINCT sbCategory FROM aa_SBCategory  LEFT JOIN aa_Category ON aa_Category.CatID = aa_SBCategory.CatID WHERE "+
-                " Category='Messaging' Or Category='SMS'",
+                "SELECT DISTINCT sbCategory FROM " +
+                "(SELECT DISTINCT sbCategory,Category FROM aa_SBCategory a LEFT JOIN aa_Category b ON b.CatID = a.CatID union  " +
+                "SELECT DISTINCT sbCategory,Category FROM aa_UserSBCategory c LEFT JOIN aa_UserCategory d ON d.CatID = c.CatID) a where " +
+                "Category='Messaging' Or Category='SMS'",
                 ClsUtility.ObjectEnum.DataTable, Entity.getServerType(clsGbl.xmlPath));
 
             theDtr = theDt.CreateDataReader();
@@ -1038,10 +1043,10 @@ namespace IQTools.Pages
                 theDt.Clear(); lbSettingsSubCategory.Items.Clear(); DataTableReader theDtr;
                 try
                 {
-                    theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, 
-                                    "SELECT DISTINCT QryName From aa_Queries LEFT JOIN aa_sbCategory ON aa_Queries.QryID = aa_sbCategory.QryID " +
-                                    "WHERE aa_sbCategory.sbCategory='" + cboSettingsCategory.Text + 
-                                    "'", 
+                    theDt = (DataTable)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams,
+                                    "SELECT DISTINCT QryName From(SELECT DISTINCT QryName,sbCategory From aa_Queries LEFT JOIN aa_sbCategory ON aa_Queries.QryID = aa_sbCategory.QryID union " +
+                                    "SELECT DISTINCT QryName,sbCategory From aa_UserQueries LEFT JOIN aa_UserSBCategory ON aa_UserQueries.QryID = aa_UserSBCategory.QryID)a " +
+                                    "WHERE a.sbCategory='" + cboSettingsCategory.Text +  "'", 
                                     ClsUtility.ObjectEnum.DataTable, serverType);
                     
                     theDtr = theDt.CreateDataReader();
@@ -1067,7 +1072,8 @@ namespace IQTools.Pages
                 try
                 {
                     theDr = (DataRow)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, 
-                        "SELECT Top 1 QryDescription From aa_queries Where QryName='" + 
+                        "SELECT Top 1 QryDescription From (SELECT  QryDescription,QryName From aa_queries union "+
+                         "SELECT  QryDescription,QryName From aa_UserQueries)a Where QryName='" + 
                         lbSettingsSubCategory.Text + "'", ClsUtility.ObjectEnum.DataRow, serverType);
 
                     lblSMSDescription.Text = theDr[0].ToString();
@@ -1130,7 +1136,8 @@ namespace IQTools.Pages
             langID = theDr[0].ToString();
 
             theDr = (DataRow)theObject.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams, 
-                    "SELECT Top 1 QryID From aa_Queries Where QryName ='" + lbSettingsSubCategory.Text + 
+                    "SELECT Top 1 QryID From (SELECT  QryID,QryName,QryDescription From aa_queries union " +
+                    "SELECT  QryID,QryName,QryDescription From aa_UserQueries)a Where QryName ='" + lbSettingsSubCategory.Text + 
                     "' Or QryDescription='" + lblSMSDescription.Text + "'", ClsUtility.ObjectEnum.DataRow, serverType);
 
             qryID = theDr[0].ToString();
@@ -1202,6 +1209,7 @@ namespace IQTools.Pages
         {
             try
             {
+                txtMessageToSend.Text = "";
                 if (cboSubCategory.Text != "" && lbLanguages.Text != "")
                 {
                     DataRow theDr; ClsUtility.Init_Hashtable();

@@ -1,0 +1,5 @@
+C:\Users\LOmare\Desktop\IQTools Source\Interface\bin\Debug\IQTools.Interface.dll
+C:\Users\LOmare\Desktop\IQTools Source\Interface\bin\Debug\IQTools.Interface.pdb
+C:\Users\LOmare\Desktop\IQTools Source\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Desktop\IQTools Source\Interface\obj\Debug\IQTools.Interface.dll
+C:\Users\LOmare\Desktop\IQTools Source\Interface\obj\Debug\IQTools.Interface.pdb

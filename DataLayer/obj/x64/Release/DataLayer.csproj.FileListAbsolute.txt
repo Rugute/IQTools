@@ -1,0 +1,6 @@
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\x64\Release\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\x64\Release\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\x64\Release\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\bin\x64\Release\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\obj\x64\Release\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\DataLayer\obj\x64\Release\DataLayer.pdb

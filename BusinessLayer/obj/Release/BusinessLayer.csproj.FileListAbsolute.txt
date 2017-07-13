@@ -1,0 +1,47 @@
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\EPPlus.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\FormLanguageSwitch.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\Npgsql.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\Mono.Security.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\FormLanguageSwitch.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\Npgsql.xml
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\de\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\es\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\fi\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\fr\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\ja\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\Release\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Release\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Release\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Release\BusinessLayer.csproj.ResolveComReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Release\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\Release\BusinessLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\BusinessLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\BusinessLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\DataLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\EPPlus.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\MySql.Data.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\Npgsql.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\MySqlBackup.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\Sand.Security.Cryptography.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\Mono.Security.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\Ionic.Zip.Reduced.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\DataLayer.pdb
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\Npgsql.xml
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\de\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\es\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\fi\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\fr\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\ja\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Release\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Release\Interop.ADOX.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Release\BusinessLayer.csproj.ResolveComReference.cache
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Release\BusinessLayer.dll
+C:\Users\LOmare\Downloads\IQTools Source\IQTools Source\BusinessLayer\obj\Release\BusinessLayer.pdb

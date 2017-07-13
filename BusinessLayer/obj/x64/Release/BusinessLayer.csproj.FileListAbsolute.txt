@@ -1,0 +1,15 @@
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\BusinessLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\DataLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\EPPlus.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\FormLanguageSwitch.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\MySql.Data.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\Sand.Security.Cryptography.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\DataLayer.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\FormLanguageSwitch.pdb
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\bin\x64\Release\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\x64\Release\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\x64\Release\Interop.ADOX.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\x64\Release\BusinessLayer.csproj.ResolveComReference.cache
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\x64\Release\BusinessLayer.dll
+C:\Dropbox\vsWorkSpace\IQToolsV3\IQTools\BusinessLayer\obj\x64\Release\BusinessLayer.pdb

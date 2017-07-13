@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("IQTools")]
 [assembly: AssemblyDescription("Reporting and Data Quality Software")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Futures Group International")]
+[assembly: AssemblyCompany("Palladium")]
 [assembly: AssemblyProduct("IQTools")]
-[assembly: AssemblyCopyright("Copyright ©  2009")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,4 +30,4 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("3.4.0.0")]
+[assembly: AssemblyFileVersion("3.5.1.2")]
