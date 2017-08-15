@@ -1664,12 +1664,12 @@ namespace DataLayer
                 SqlCommand myComm = new SqlCommand("Open symmetric key Key_CTC decryption by password='ttwbvXWpqb5WOLfLrBgisw=='", myConn);
                 j = myComm.ExecuteNonQuery();
                 myComm.Dispose(); j = 0;
-                 SQLString = "Select *, " +
-                                  " convert(varchar(100),decryptbykey(MiddleName)) dMiddleName," +
-                                  " convert(varchar(100),decryptbykey(firstname)) dFirstName, convert(varchar(100),decryptbykey(LastName))dLastName," +
-                                  " convert(varchar(100),decryptbykey(Address))dAddress, convert(varchar(100),decryptbykey(Phone)) dPhone" +
-                                  " INTO [" + IQToolsDB + "].dbo.mst_patient_decoded  From " +
-                                  "mst_patient Where mst_patient.deleteflag is null or mst_patient.deleteflag=0";
+                 SQLString = "Select a.*, " +
+                             " convert(varchar(100),decryptbykey(MiddleName)) dMiddleName," +
+                             " convert(varchar(100),decryptbykey(firstname)) dFirstName, convert(varchar(100),decryptbykey(LastName))dLastName," +
+                             " convert(varchar(100),decryptbykey(Address))dAddress, convert(varchar(100),decryptbykey(Phone)) dPhone, convert(varchar(100),decryptbykey(NationalId)) dNationalId " +
+                             " INTO [" + IQToolsDB + "].dbo.mst_patient_decoded  From " +
+                             "mst_patient a inner join patient b on a.ptn_pk=b.ptn_pk Where a.deleteflag is null or a.deleteflag=0";
 
 
                 myComm = new SqlCommand(SQLString, myConn);
