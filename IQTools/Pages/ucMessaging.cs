@@ -595,7 +595,12 @@ namespace IQTools.Pages
                         Cursor.Current = Cursors.WaitCursor;
                         comm.Open();
                         Cursor.Current = Cursors.Default;
-                        if (comm.IsOpen()) cboModemWebService.Items.Add(modem.GetPropertyValue("Name"));
+                        if (comm.IsOpen())
+                        {
+                            cboModemWebService.Items.Add(modem.GetPropertyValue("Name"));
+                            cmdLoadModem.Enabled = false;
+                        }
+                            
                         comm.Close();
                     }
                     catch
