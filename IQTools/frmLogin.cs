@@ -1,152 +1,43 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Threading;
 using DataLayer;
 using BusinessLayer;
-using System.Data.SqlClient;
-using System.Data.OleDb;
-using System.Data.Odbc;
-using MySql.Data.MySqlClient;
+using System.Threading;
+using System.Reflection;
+using System.Data.Sql;
 
 namespace IQTools
 {
     public partial class frmLogin : Form
     {
         string serverType = string.Empty;
-
-        public static MySqlConnection db = new MySqlConnection();
+        string selectedFacility = "";
+        string emrType = string.Empty;
+        string iqtoolsConnectionString = Entity.GetConnString();
+        string MFLCode;
 
         public void InitializeForm()
         {
-            if (!this.Visible)
-                this.Show();
-            serverType = Entity.getServerType(BusinessLayer.clsGbl.xmlPath);
-            cboLanguage.Items.Clear();
-            LanguageCollector lc = new LanguageCollector();
-            BusinessLayer.clsGbl.currUser = "";
-            BusinessLayer.clsGbl.currPass = "";
-            int currentLanguage;
-            CultureInfoDisplayItem[] lis = lc.GetLanguages(System.Globalization.LanguageCollector.LanguageNameDisplay.EnglishName, out currentLanguage);
-            cboLanguage.Items.AddRange(lis);
-            this.cboLanguage.SelectedIndex = currentLanguage;
-
-
-
-            if (!SettingsAreValid())
+            serverType = Entity.GetServerType();
+            emrType = Entity.GetEMRType();
+            if (!Entity.ValidateSettings(serverType))
             {
-
-                BusinessLayer.clsGbl.SettingsValid = false;
-                BusinessLayer.clsGbl.DBState = "Incorrect settings";
-                lblLoadStat.Text = "Incorrect settings";
-
-                MessageBox.Show(Assets.Messages.InvalidSettings, Assets.Messages.InfoHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clsGbl.SettingsValid = false;
+                lblLoad.Text = "Invalid Settings";
+                picLoad.Image = Properties.Resources.wrong;
             }
             else
             {
-                BusinessLayer.clsGbl.SettingsValid = true;
-
-                DataLayer.Entity theObject = new DataLayer.Entity();
-                DataLayer.ClsUtility.Init_Hashtable(); DataRow theDr;
-                try
-                {
-                    LoadPic();
-                    theObject = new DataLayer.Entity(); DataLayer.ClsUtility.Init_Hashtable(); DataRow dr = null;
-                    if (serverType == "mssql")
-                    {
-                        dr = (DataRow)theObject.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath)
-                            , DataLayer.ClsUtility.theParams, "Select Top 1 Case When [ActCount] >= [TblCount] Then 'Proceed' Else 'Halt' End [Action], " +
-                            "IQStatus,PmmsType, a.UpdateDate, a.PMMS From " +
-                            "(select count(*) [ActCount] from sys.tables Where [Name] Like 'Tmp_%')Tmp1, " +
-                            "(Select Count(*) [TblCount] From sys.procedures Where Name Like '%Master_IQTools%')Tmp2, aa_Database a"
-                            , DataLayer.ClsUtility.ObjectEnum.DataRow, "mssql");
-
-                    }
-                    else if (serverType == "mysql")
-                    {
-                        dr = (DataRow)theObject.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath), DataLayer.ClsUtility.theParams
-                            , "Select Case When tmpTables >= MasterProcs Then 'Proceed' Else 'Halt' End `Action`, " +
-                                "IQStatus,PmmsType, a.UpdateDate, a.PMMS From " +
-                                "(Select COUNT(TABLE_NAME) tmpTables From aa_Database a Inner Join INFORMATION_SCHEMA.Tables b On a.DBName = b.TABLE_SCHEMA " +
-                                "WHERE b.TABLE_NAME LIKE 'tmp_%' AND TABLE_TYPE = 'BASE TABLE')Tmp1, " +
-                                "(Select COUNT(ROUTINE_NAME) MasterProcs From aa_Database a Inner Join INFORMATION_SCHEMA.Routines b On a.DBName = b.ROUTINE_SCHEMA " +
-                                "WHERE b.ROUTINE_NAME LIKE '%Master_IQTools%' AND ROUTINE_TYPE = 'PROCEDURE')Tmp2, aa_Database a"
-                                , DataLayer.ClsUtility.ObjectEnum.DataRow, serverType);
-                    }
-                    else if (serverType == "pgsql")
-                    {
-                        dr = (DataRow)theObject.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath)
-                            , DataLayer.ClsUtility.theParams
-                            , "select case when tmptables >= masterprocs then 'proceed' else 'halt' end zaction, " + 
-                               " iqstatus,pmmstype, a.updatedate, a.pmms from " +
-                               " (select count(table_name) tmptables from information_schema.tables " +
-                               " a inner join iqtools.aa_database b on a.table_catalog = b.dbname " +
-                               " where table_schema = 'iqtools' and table_name like 'tmp%' " +
-                               " )tmp1,(select count(routine_name) masterprocs from information_schema.routines " +
-                               " a inner join iqtools.aa_database b on a.specific_catalog = b.dbname " +
-                               " where specific_schema = 'iqtools' " +
-                               " and routine_name like '%master_cpad%' " + 
-                               " )tmp2, iqtools.aa_database a"
-                                , DataLayer.ClsUtility.ObjectEnum.DataRow, serverType);
-                    }
-
-                    if (dr["IQStatus"].ToString().ToLower() == "no data")
-                    {
-                        BusinessLayer.clsGbl.DBState = "No Data";
-                        lblLoadStat.Text = "No data"; lblUpdate.Text = "";
-                        chkRefresh.Checked = true;
-                    }
-                    else if (dr[0].ToString().ToLower() != "proceed"
-                                && dr["IQStatus"].ToString().ToLower() != "loading"
-                                 )
-                    {
-                        try
-                        {
-                            int i = (int)theObject.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath), DataLayer.ClsUtility.theParams
-                              , "Update aa_Database set IQStatus='No data', UpdateDate=Null", DataLayer.ClsUtility.ObjectEnum.DataRow, serverType);
-                        }
-                        catch { }
-                        BusinessLayer.clsGbl.DBState = "No Data";
-                        lblLoadStat.Text = "No data"; lblUpdate.Text = "";
-                        chkRefresh.Checked = true;
-                    }
-                    else
-                    {
-                        lblLoadStat.Text = dr["IQStatus"].ToString();
-                        lblUpdate.Text = Convert.ToDateTime(dr["UpdateDate"].ToString()).Date.ToShortDateString(); //.Substring(0, 10);
-                    }
-
-                    BusinessLayer.clsGbl.DBState = lblLoadStat.Text;
-                    if (lblLoadStat.Text.ToLower() != "loading" && lblLoadStat.Text.ToLower() != "No data")
-                    {
-                        theObject = new DataLayer.Entity(); DataLayer.ClsUtility.Init_Hashtable();
-                        if (serverType == "mysql")
-                        {
-                            theDr = (DataRow)theObject.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath), DataLayer.ClsUtility.theParams
-                                , "SELECT Case WHEN DateDiff(Day, Cast('" + lblUpdate.Text.Trim() + "' As dateTime), GetDate()) >= 1 Then 2 Else 3 End [DaysOLD]"
-                                , DataLayer.ClsUtility.ObjectEnum.DataRow, "mssql");
-
-                            if (theDr["DaysOLD"].ToString().Trim() == "2")
-                                chkRefresh.Checked = true;
-                        }
-                    }
-                    clsGbl.PMMS = dr["PMMS"].ToString().ToLower();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                clsGbl.SettingsValid = true;
+                lblLoad.Text = "Ready";
+                picLoad.Image = Properties.Resources.right;
+                LoadPic();
                 activateRefresh();
                 activateSatelliteCombo();
-
             }
         }
-        
+
         public frmLogin()
         {
             InitializeComponent();
@@ -154,8 +45,7 @@ namespace IQTools
 
         private void cmdLogin_Click(object sender, EventArgs e)
         {
-            BusinessLayer.clsGbl.IQDate = IQDate.Value.ToString();
-            string selectedFacility = "";
+           
             if (clsGbl.SettingsValid == false)
             {
                 MessageBox.Show(Assets.Messages.InvalidSettings, Assets.Messages.InfoHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -163,15 +53,9 @@ namespace IQTools
             }
             else
             {
-                clsGbl.DBState = lblLoadStat.Text;
-                if (chkRefresh.Checked)
-                {
-                    clsGbl.tblRefresh = "true";
-                }
-
                 if (txtUser.Text != "" && txtPassword.Text != "")
                 {
-                    if(clsGbl.PMMS == "iqcare")
+                    if (emrType == "iqcare")
                     {
                         if (cboFacility.SelectedIndex > -1)
                             selectedFacility = cboFacility.SelectedItem.ToString();
@@ -179,14 +63,14 @@ namespace IQTools
                         {
                             MessageBox.Show("Please Select A Facility To Proceed", Assets.Messages.InfoHeader
                                 , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
+                            return;
                         }
                     }
-                    if (loginEMR(clsGbl.PMMS, txtUser.Text.Trim(), txtPassword.Text, selectedFacility))
+                    if (loginEMR(emrType, txtUser.Text.Trim(), txtPassword.Text, selectedFacility))
                     {
-                        Form tmp = new frmLoad();
-                        tmp.Show();
-                        this.Hide();
+                        Thread loadThread = new Thread(() => LoadIQTools(chkRefresh.Checked));
+                        loadThread.SetApartmentState(ApartmentState.STA);
+                        loadThread.Start();
                     }
                 }
                 else
@@ -196,20 +80,7 @@ namespace IQTools
                 }
             }
         }
-
-        private void lblClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void lblDB_Click(object sender, EventArgs e)
-        {
-            clsGbl.tblRefresh = chkRefresh.Checked.ToString();
-            clsGbl.IQDirection = "connect";
-            Form tmp = new frmGetDB(this);
-            tmp.Show(); this.Hide();
-        }
-
+        
         private void frmLogin_Load(object sender, EventArgs e)
         {
             InitializeForm();
@@ -217,58 +88,45 @@ namespace IQTools
 
         private void LoadPic()
         {
-            Entity en = new Entity();
-            ClsUtility.Init_Hashtable();
-            if (Entity.getServerType(BusinessLayer.clsGbl.xmlPath) == "mysql")
-            {
-                DataRow dr = (DataRow)en.ReturnObject(Entity.getconnString(BusinessLayer.clsGbl.xmlPath), ClsUtility.theParams
-                    , "SELECT PMMS From aa_Database LIMIT 1", ClsUtility.ObjectEnum.DataRow, "mysql");
-                if (dr[0].ToString().ToLower() == "isante")
-                {
-                    picLogo.Image = Properties.Resources.isante_ht1;
-                }
-            }
-        }
-
-        private void cboLanguage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            BusinessLayer.clsGbl.cidi = (CultureInfoDisplayItem)cboLanguage.SelectedItem;
-            FormLanguageSwitchSingleton.Instance.ChangeLanguage(this, BusinessLayer.clsGbl.cidi.CultureInfo);
-            //FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(BusinessLayer.clsGbl.cidi.CultureInfo);
-            Thread.CurrentThread.CurrentUICulture = BusinessLayer.clsGbl.cidi.CultureInfo;
-
+            //Entity en = new Entity();
+            //ClsUtility.Init_Hashtable();
+            //if (Entity.GetServerType() == "mysql")
+            //{
+            //    DataRow dr = (DataRow)en.ReturnObject(Entity.GetConnString(), ClsUtility.theParams
+            //        , "SELECT PMMS From aa_Database LIMIT 1", ClsUtility.ObjectEnum.DataRow, "mysql");
+            //    if (dr[0].ToString().ToLower() == "isante")
+            //    {
+            //        picLogo.Image = Properties.Resources.isante_ht1;
+            //    }
+            //}
         }
 
         private void activateRefresh()
         {
-            if (Entity.getRefreshRights(BusinessLayer.clsGbl.xmlPath).ToLower() == "no")
+            if (serverType == "pgsql")
+                chkRefresh.Checked = true;
+            if (Entity.GetRefreshRights() == "no")
             {
                 chkRefresh.Checked = false;
                 chkRefresh.Enabled = false;
             }
         }
 
-        public bool loginEMR(string emr, string userName, string password, string facilityName)  //This Method need to be accessed in FrmMain, internal dataset connection
+        private bool loginEMR(string emr, string userName, string password, string facilityName)
         {
             string emrConnString = "";
             ClsUtility.Init_Hashtable();
             Entity en = new Entity();
-
-            //DataRow dr = (DataRow)en.ReturnObject(Entity.getconnString(BusinessLayer.clsGbl.xmlPath), ClsUtility.theParams
-            //            , "Select ConnString,DBase,DBName From aa_Database", ClsUtility.ObjectEnum.DataRow, serverType);
-            //emrConnString = ClsUtility.Decrypt(dr["ConnString"].ToString());
-
             try
             {
                 if (emr.ToLower() == "iqcare")
                 {
-                    DataRow dr = (DataRow)en.ReturnObject(Entity.getconnString(BusinessLayer.clsGbl.xmlPath), ClsUtility.theParams
+                    DataRow dr = (DataRow)en.ReturnObject(Entity.GetConnString(), ClsUtility.theParams
                         , "Select ConnString,DBase,DBName From aa_Database", ClsUtility.ObjectEnum.DataRow, serverType);
                     emrConnString = ClsUtility.Decrypt(dr["ConnString"].ToString());
                     string sPassword = ClsUtility.Encrypt(password);
-                    string sSQL = "SELECT top 1 a.userID, a.UserName, a.Password, a.UserFirstName, a.UserLastName, c.GroupName, f.FacilityID, f.SatelliteID MFLCode FROM " +
-                                "(Select FacilityID, SatelliteID FROM mst_Facility WHERE FacilityName = '" + facilityName + "') f, " +
+                    string sSQL = "SELECT top 1 a.userID, a.UserName, a.Password, a.UserFirstName, a.UserLastName, c.GroupName, f.FacilityID, f.PosID MFLCode FROM " +
+                                "(Select FacilityID, PosID FROM mst_Facility WHERE FacilityName = '" + facilityName + "') f, " +
                                 "mst_user a " +
                                 "INNER JOIN dbo.lnk_UserGroup b ON a.UserID = b.UserID " +
                                 "INNER JOIN dbo.mst_Groups c ON b.GroupID = c.GroupID " +
@@ -290,7 +148,6 @@ namespace IQTools
                             return false;
                         }
                     }
-
                     if (dr.Table.Rows.Count >= 1)
                     {
                         clsGbl.loggedInUser.UserID = Convert.ToInt16(dr["userID"]);
@@ -309,172 +166,19 @@ namespace IQTools
                         MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader);
                         return false;
                     }
-
-                }
-                else if (emr.ToLower() == "ctc2")
-                {
-                    DataRow dr = (DataRow)en.ReturnObject(Entity.getconnString(BusinessLayer.clsGbl.xmlPath), ClsUtility.theParams
-                        , "Select ConnString,DBase,DBName From aa_Database", ClsUtility.ObjectEnum.DataRow, serverType);
-                    string connectionString = Entity.getconnString(clsGbl.xmlPath);
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        SqlCommand command = conn.CreateCommand();
-                        command.CommandType = CommandType.Text;
-                        command.CommandText = @"SELECT ID, Version, Password FROM aa_DataFilePasswords";
-                        SqlDataReader reader = command.ExecuteReader();
-                        using (DataTable dataFilePasswordsDataTable = new DataTable())
-                        {
-                            dataFilePasswordsDataTable.Load(reader);
-                            try
-                            {
-                                if (userName != "" && password != "")
-                                {
-
-                                    foreach (DataRow row in dataFilePasswordsDataTable.Rows)
-                                    {
-                                        string cipherTextPassword = row["Password"].ToString();
-                                        string plainTextPassword = ClsUtility.Decrypt(cipherTextPassword);
-                                        //string connString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;  Data Source= {0} ;Jet OLEDB:Database Password={1};Persist Security Info=False;"
-                                        //                                    , dr["DBase"], plainTextPassword);
-
-                                        string connString = String.Format("Provider=Microsoft.ACE.OLEDB.12.0;  Data Source= {0} ;Jet OLEDB:Database Password={1};Persist Security Info=False;"
-                                                                            , dr["DBase"], plainTextPassword);
-
-
-                                        OleDbConnection connection = new OleDbConnection(connString);
-                                        try
-                                        {
-                                            //OleDbConnection connection = new OleDbConnection(connString);
-                                            connection.Open();
-                                            using (OleDbCommand cmd = new OleDbCommand("Select * from SecurityUsers where LoginName = @Username and Password = @Password", connection))
-                                            {
-                                                cmd.Parameters.AddWithValue("@Username", userName);
-                                                cmd.Parameters.AddWithValue("@Password", password);
-
-                                                using (OleDbDataReader r = cmd.ExecuteReader())
-                                                {
-                                                    if (r.HasRows)
-                                                    {
-                                                        r.Read();
-                                                        clsGbl.loggedInUser.UserID = Convert.ToInt16(r["UserNumber"]);
-                                                        clsGbl.loggedInUser.UserName = r["LoginName"].ToString();
-                                                        clsGbl.loggedInUser.Password = r["Password"].ToString();
-                                                        clsGbl.loggedInUser.FirstName = r["FullName"].ToString();
-                                                        clsGbl.loggedInUser.LastName = r["FullName"].ToString();
-                                                        clsGbl.loggedInUser.Group = r["GroupID"].ToString();
-                                                        return true;
-                                                    }
-                                                    else
-                                                    {
-                                                        MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader);
-                                                        return false;
-                                                    }
-
-                                                }
-                                            }
-                                            //connection.Close();
-                                            //connection.Dispose();
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            try
-                                            {
-                                                OleDbException oleDbEx = (OleDbException)ex;
-                                                if (oleDbEx.ErrorCode == -2147467259)
-                                                    throw ex; // Unknown format.
-
-                                            }
-                                            catch
-                                            {
-                                                MessageBox.Show(ex.Message, Assets.Messages.ErrorHeader);
-                                                return false;
-                                            }
-                                        }
-                                        finally
-                                        {
-                                            connection.Close();
-                                            connection.Dispose();
-                                        }
-                                    }
-
-                                }
-
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, Assets.Messages.ErrorHeader);
-                                return false;
-                            }
-
-                        }
-                        return false;
-                    }
-                }
-                else if (emr.ToLower() == "ctc2mysql")
-                {
-                    try
-                    {
-                        /*  USED INCASE OF ODBC CONNECTION
-                       MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder (emrConnString );
-                        string user = builder.UserID;
-                        string pass = builder.Password;
-                        string database = builder.Database;
-                        string server = builder.Server;
-                        string newEmrConnectionString = String.Format ( "Driver={0};Server={1};Database={2};uid={3};pwd={4}", "{MySQL ODBC 3.51 Driver}", server, database, user,pass);
-                        */
-                        db = new MySqlConnection(emrConnString);
-                        db.Open();
-                        String sql = "Select * from SecurityUsers where LoginName = @Username and Password = @Password";
-                        MySqlCommand query = new MySqlCommand(sql);
-                        query.Connection = db;
-                        query.Parameters.AddWithValue("@Username", userName);
-                        query.Parameters.AddWithValue("@Password", password);
-                        MySqlDataReader queryResults = query.ExecuteReader();
-
-                        if (queryResults.HasRows)
-                        {
-                            queryResults.Read();
-                            clsGbl.loggedInUser.UserID = Convert.ToInt16(queryResults["UserNumber"]);
-                            clsGbl.loggedInUser.UserName = queryResults["LoginName"].ToString();
-                            clsGbl.loggedInUser.Password = queryResults["Password"].ToString();
-                            clsGbl.loggedInUser.FirstName = queryResults["FullName"].ToString();
-                            clsGbl.loggedInUser.LastName = queryResults["FullName"].ToString();
-                            clsGbl.loggedInUser.Group = queryResults["GroupID"].ToString();
-                            db.Close();
-                            db.Dispose();
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader);
-                            db.Close();
-                            db.Dispose();
-                            return false;
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, Assets.Messages.ErrorHeader);
-                        return false;
-                    }
                 }
                 else if (emr.ToLower() == "cpad")
                 {
                     DataRow dr = null;
                     string sPassword = ClsUtility.Encrypt(password);
-                    //string sPassword = ClsUtility.GetSHA1Hash(password);
-                    //string sSQL = "SELECT a.userID, a.UserName, a.Password, a.firstname, a.lastname, b.facilityname FROM cpad.mst_user a,(select a.facilityname from cpad.mst_facility a where configured = true limit 1)b " +
-                    //        "WHERE a.DeleteFlag = false AND a.username = '" + userName + "' AND password = '" + sPassword + "' " +
-                    //        "limit 1";
-                    string sSQL = "SELECT a.userID, a.UserName, a.Password, a.firstname, a.lastname, b.facilityname, a.salt FROM cpad.mst_user a,(select a.facilityname from cpad.mst_facility a where configured = true limit 1)b " +
+                    string sSQL = "SELECT a.userID, a.UserName, a.Password, a.firstname, a.lastname, b.facilityname, a.salt FROM cpad.mst_user a" +
+                        ",(select a.facilityname from cpad.mst_facility a where configured = true limit 1)b " +
                             "WHERE a.DeleteFlag = false AND a.username = '" + userName + "' limit 1";
-
                     try
                     {
-                       dr = (DataRow)en.ReturnObject(Entity.getconnString(BusinessLayer.clsGbl.xmlPath), ClsUtility.theParams, sSQL, ClsUtility.ObjectEnum.DataRow, serverType);
+                        dr = (DataRow)en.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams
+                            , sSQL, ClsUtility.ObjectEnum.DataRow, serverType);
                     }
-                    
                     catch (Exception ex)
                     {
                         if (ex.Message.Contains("There is no row at position 0"))
@@ -488,7 +192,6 @@ namespace IQTools
                             return false;
                         }
                     }
-
                     if (dr.Table.Rows.Count >= 1)
                     {
                         string salt = dr["salt"].ToString();
@@ -507,7 +210,7 @@ namespace IQTools
                         else
                         {
                             MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return false;                          
+                            return false;
                         }
                     }
                     else
@@ -515,9 +218,7 @@ namespace IQTools
                         MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader);
                         return false;
                     }
-
                 }
-
                 else return true;
             }
             catch (Exception ex)
@@ -525,64 +226,19 @@ namespace IQTools
                 MessageBox.Show(ex.Message, Assets.Messages.ErrorHeader);
                 return false;
             }
-
-        }
-
-        private bool SettingsAreValid()
-        {
-            try
-            {
-                Entity en = new Entity();
-
-                //Check connection to IQTools database
-                DataRow dr = (DataRow)en.ReturnObject(DataLayer.Entity.getconnString(BusinessLayer.clsGbl.xmlPath),
-                                DataLayer.ClsUtility.theParams,
-                                "Select ConnString, PMMSType, PMMS From aa_Database",
-                                DataLayer.ClsUtility.ObjectEnum.DataRow, serverType);
-                clsGbl.PMMS = dr["PMMS"].ToString();
-
-                //Check connection to EMR database
-                string PMMSType = dr["PMMSType"].ToString();
-                if (PMMSType.ToLower() == "mssql")
-                {
-                    string EMRConnectionString = dr["ConnString"].ToString();
-                    SqlConnection con = new SqlConnection(ClsUtility.Decrypt(EMRConnectionString) + "Connection Timeout=5");
-                    con.Open();
-                    con.Close();
-                }
-                else if (PMMSType.ToLower() == "mysql")
-                {
-
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-
-                if (ex.Message.Contains("Unknown database"))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
         }
 
         private void activateSatelliteCombo()
         {
-            if (clsGbl.PMMS.ToLower() == "iqcare")
+            if (emrType == "iqcare")
             {
                 lblFacility.Visible = true;
                 cboFacility.Visible = true;
 
-
                 string sql = "Select FacilityName, FacilityID FROM mst_Facility WHERE DeleteFlag = 0";
                 Entity en = new Entity();
 
-                DataRow dr = (DataRow)en.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams
+                DataRow dr = (DataRow)en.ReturnObject(Entity.GetConnString(), ClsUtility.theParams
                         , "Select ConnString,DBase,DBName From aa_Database", ClsUtility.ObjectEnum.DataRow, serverType);
                 string emrConnString = ClsUtility.Decrypt(dr["ConnString"].ToString());
 
@@ -594,18 +250,15 @@ namespace IQTools
                 {
                     cboFacility.Items.Add(dtr[0].ToString());
                 }
-                //if (cboFacility.Items[1].ToString() != "")
-                 //   cboFacility.SelectedItem = cboFacility.Items[0];
             }
-            else if (clsGbl.PMMS.ToLower() == "cpad")
+            else if (emrType == "cpad")
             {
                 lblFacility.Visible = true;
                 cboFacility.Visible = true;
 
-
                 string sql = "Select facilityname, facilityid FROM cpad.mst_facility WHERE configured = true";
                 Entity en = new Entity();
-                DataTable dt = (DataTable)en.ReturnObject(Entity.getconnString(clsGbl.xmlPath), ClsUtility.theParams
+                DataTable dt = (DataTable)en.ReturnObject(Entity.GetConnString(), ClsUtility.theParams
                     , sql, ClsUtility.ObjectEnum.DataTable, serverType);
                 DataTableReader dtr = dt.CreateDataReader();
                 cboFacility.Items.Clear();
@@ -613,10 +266,463 @@ namespace IQTools
                 {
                     cboFacility.Items.Add(dtr[0].ToString());
                 }
-                //if (cboFacility.Items[1].ToString() != "")
-                //   cboFacility.SelectedItem = cboFacility.Items[0];
             }
         }
 
+        private void LoadIQTools(bool refresh)
+        {            
+            SetControlPropertyThreadSafe(cmdLogin, "Enabled", false);
+            SetControlPropertyThreadSafe(picLoad, "Image", Properties.Resources.progress4);
+            SetControlPropertyThreadSafe(lblLoad, "Text", "Loading, Please Wait...");
+            string connectionString = Entity.GetConnString();
+            int i = 0;
+            Entity en = new Entity();
+            ClsUtility.Init_Hashtable();
+            try
+            {
+                if (emrType == "iqcare")
+                {
+                    try
+                    {
+                        if (refresh) {
+                            //If IQTools Updated
+                            //Entity.CreateIQToolsDB("microsoft sql server", serverUserName, server, serverPassword, iqtoolsDB, "iqcare")
+                            //
+                        Entity.DropIQToolsObjects(emrType, serverType);
+                        Entity.CreateIQToolsObjects(emrType, serverType);
+                            if (Entity.DecryptMstPatient())
+                            {
+                                ClsUtility.Init_Hashtable();
+                                try
+                                {
+                                    DataRow fDr = null;
+                                    {
+                                        fDr = (DataRow)en.ReturnObject(connectionString, ClsUtility.theParams
+                                              , "SELECT TOP 1 FacilityName FROM mst_Facility WHERE DeleteFlag = 0"
+                                              , ClsUtility.ObjectEnum.DataRow, "mssql");
+                                        ClsUtility.AddParameters("@FacilityName", SqlDbType.Text, fDr[0].ToString());
+                                        ClsUtility.AddParameters("@EMR", SqlDbType.Text, "iqcare");
+                                        ClsUtility.AddParameters("@EMRVersion", SqlDbType.Text, clsGbl.EmrVersion);
+                                        ClsUtility.AddParameters("@VisitPK", SqlDbType.Int, 0);
+                                        ClsUtility.AddParameters("@PatientPK", SqlDbType.Int, 0);
+                                        ClsUtility.AddParameters("@RefreshFlag", SqlDbType.Int, 1);
+
+                                        try
+                                        {
+                                            i = (int)en.ReturnObject(connectionString, ClsUtility.theParams
+                                                                                , "pr_RefreshIQTools"
+                                                                                , ClsUtility.ObjectEnum.ExecuteNonQuery, "mssql");
+                                        }
+                                        catch (Exception ex) { MessageBox.Show(ex.Message); }
+                                        ClsUtility.Init_Hashtable();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    //EH.LogError(ex.Message, "<<frmLoad:loadIQTools()>>", serverType);
+                                    //clsGbl.IQDirection = "connect";
+                                    MessageBox.Show(ex.Message);
+                                }
+                            }
+                        }
+                        
+                        Form tmp = new frmMain();
+                        AccessContol();
+                        Application.Run(tmp);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There Was A Problem Accessing The EMR Database, Data May Not Have Been Loaded Into IQTools"
+                                                , "IQTools Connection Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);                        
+                        SetControlPropertyThreadSafe(cmdLogin, "Enabled", true);
+                        SetControlPropertyThreadSafe(picLoad, "Image", null);
+                        SetControlPropertyThreadSafe(lblLoad, "Text", "");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("IQTools Could Not Connect To The EMR Database, Please Configure IQTools. Error Message=" + ex.Message
+                                    , "IQTools Connection Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                SetControlPropertyThreadSafe(cmdLogin, "Enabled", true);
+                SetControlPropertyThreadSafe(picLoad, "Image", null);
+                SetControlPropertyThreadSafe(lblLoad, "Text", "");
+            }
+            
+        }
+
+        private void AccessContol()
+        {
+            if (InvokeRequired)
+            { this.Invoke(new MethodInvoker(delegate { this.Hide(); })); }
+            else { this.Hide(); }
+        }
+
+        private delegate void SetControlPropertyThreadSafeDelegate(Control control, string propertyName, object propertyValue);
+
+        private static void SetControlPropertyThreadSafe(Control control, string propertyName, object propertyValue)
+        {
+            if (control.InvokeRequired)
+            {
+                control.Invoke(new SetControlPropertyThreadSafeDelegate(SetControlPropertyThreadSafe)
+                    , new object[] { control, propertyName, propertyValue });
+            }
+            else
+            {
+                control.GetType().InvokeMember(propertyName, BindingFlags.SetProperty, null, control
+                    , new object[] { propertyValue });
+            }
+        }
+
+        private void tcLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tcLogin.SelectedTab == tpSettings)
+            {
+                Thread g = new Thread(() => GetSqlServers());
+                g.SetApartmentState(ApartmentState.STA);
+                g.Start();
+            }
+            if(tcLogin.SelectedTab == tpLogin)
+            {
+                iqtoolsConnectionString = Entity.GetConnString();
+                InitializeForm();
+            }
+        }
+
+        private void GetSqlServers()
+        {
+
+            if (cboSQLServer.InvokeRequired)
+            {
+                cboSQLServer.Invoke(new MethodInvoker(delegate
+                {
+                    cboSQLServer.Items.Clear();
+                }));
+            }
+            else
+            {
+                cboSQLServer.Items.Clear();
+            }
+
+            SetControlPropertyThreadSafe(lblSaveProgress, "Text", "Getting List Of SQL Servers");
+            SetControlPropertyThreadSafe(picSettingsProgress, "Image", Properties.Resources.progress4);
+            SetControlPropertyThreadSafe(cboSQLServer, "DataSource", null);
+            SetControlPropertyThreadSafe(cboSQLServer, "Enabled", false);
+           DataTable servers = SqlDataSourceEnumerator.Instance.GetDataSources();
+            string displayMember = string.Empty;
+            for (int i = 0; i < servers.Rows.Count; i++)
+            {
+
+                if ((servers.Rows[i]["InstanceName"].ToString()) != string.Empty)
+                {
+                    if (cboSQLServer.InvokeRequired)
+                    {
+                        cboSQLServer.Invoke(new MethodInvoker(delegate
+                        {
+                            cboSQLServer.Items.Add(servers.Rows[i]["ServerName"] + "\\" + servers.Rows[i]["InstanceName"]);
+                        }));
+                    }
+                    else
+                    {
+                        cboSQLServer.Items.Add(servers.Rows[i]["ServerName"] + "\\" + servers.Rows[i]["InstanceName"]);
+                    }
+                }             
+
+                else
+                {
+                    if (cboSQLServer.InvokeRequired)
+                    {
+                        cboSQLServer.Invoke(new MethodInvoker(delegate
+                        {
+                            cboSQLServer.Items.Add(servers.Rows[i]["ServerName"]);
+                        }));
+                    }
+                    else
+                    {
+                        cboSQLServer.Items.Add(servers.Rows[i]["ServerName"]);
+                    }
+                }                   
+
+            }
+            SetControlPropertyThreadSafe(lblSaveProgress, "Text", "Done");
+            SetControlPropertyThreadSafe(cboSQLServer, "Enabled", true);
+            SetControlPropertyThreadSafe(picSettingsProgress, "Image", Properties.Resources.right);
+        }
+
+        private void cboIQCareDatabase_Enter(object sender, EventArgs e)
+        {
+            try {
+                string connString = string.Empty;
+                if (cboSQLServer.Text.Trim() != string.Empty && txtServerUserName.Text.Trim() != string.Empty
+                    && txtServerPassword.Text != string.Empty)
+                {
+                    connString =
+                        CreateConnectionString(cboSQLServer.Text.Trim(), txtServerUserName.Text.Trim(), txtServerPassword.Text, string.Empty);
+                    cboIQCareDatabase.DataSource = new BindingSource(GetIQCareDBs(connString), null);
+                    cboIQCareDatabase.DisplayMember = "IQCareDB";
+                    cboIQCareDatabase.SelectedIndex = -1;
+                    cboIQToolsDatabase.DataSource = new BindingSource(GetIQToolsDBs(connString), null);
+                    cboIQToolsDatabase.DisplayMember = "IQToolsDB";
+                    cboIQToolsDatabase.SelectedIndex = -1;
+                    picServer.Image = Properties.Resources.right;
+                    picUserName.Image = Properties.Resources.right;
+                    picPassword.Image = Properties.Resources.right; 
+                }
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message.ToLower().Contains("login failed"))
+                {
+                    picServer.Image = Properties.Resources.right;
+                    picUserName.Image = Properties.Resources.right;
+                    picPassword.Image = Properties.Resources.wrong;
+                }
+                MessageBox.Show(ex.Message);
+                
+            }
+            
+        }
+
+        private string CreateConnectionString(string server, string username, string pass, string db)
+        {
+            if(db != string.Empty)
+            {
+                return string.Format("server = {0}; user id={1}; password={2};database={3}", server, username, pass, db);
+            }
+            else
+                return string.Format("server = {0}; user id={1}; password={2}", server, username, pass);
+        }
+
+
+        private DataTable GetIQCareDBs(string connString)
+        {
+            Entity en = new Entity();
+            DataTable dt = (DataTable)en.ReturnObject(connString, null
+                        , "SELECT d.name IQCareDB, f.name logicalName FROM master..sysaltfiles f " +
+                        "INNER JOIN master..sysdatabases d ON f.dbid = d.dbid " +
+                        "Where f.name like '%iqcare%' and f.fileid = 1"
+                        , ClsUtility.ObjectEnum.DataTable, serverType);
+            return dt;
+        }
+
+        private DataTable GetIQToolsDBs(string connString)
+        {
+            Entity en = new Entity();
+            DataTable dt = (DataTable)en.ReturnObject(connString, null
+                 , "SELECT d.name IQToolsDB, f.name logicalName FROM master..sysaltfiles f " +
+                        "INNER JOIN master..sysdatabases d ON f.dbid = d.dbid " +
+                        "Where f.name like '%iqtools%' and f.fileid = 1"
+                        , ClsUtility.ObjectEnum.DataTable, serverType);
+            return dt;
+        }
+
+        private void cboIQCareDatabase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private string GetMFLCode(string connString)
+        {
+            Entity en = new Entity();
+            try
+            {
+                DataRow dr = (DataRow)en.ReturnObject(connString, null, "SELECT top 1 f.FacilityID, f.PosID MFLCode FROM (Select FacilityID, PosID FROM mst_Facility where deleteflag=0)f"
+                 , ClsUtility.ObjectEnum.DataRow, serverType);
+
+                MFLCode = dr["MFLCode"].ToString();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("There is no row at position 0"))
+                {
+                    MessageBox.Show(Assets.Messages.InvalidUser, Assets.Messages.ErrorHeader, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // return false;
+                }   
+            }
+            return MFLCode;
+        }
+
+        private string GetIQCareVersion(string connString)
+        {
+            string IQCareVersion = string.Empty;
+            try {
+                Entity en = new Entity();
+                DataRow dr = (DataRow)en.ReturnObject(connString, null, "SELECT TOP 1 AppVer FROM AppAdmin"
+                    , ClsUtility.ObjectEnum.DataRow, serverType);
+                IQCareVersion = dr["AppVer"].ToString();                
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message.ToLower().Contains("not exist"))
+                    return "Not An IQCare DB";
+            }
+            return IQCareVersion;
+        }
+
+        private void cboIQCareDatabase_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                string connString = string.Empty;
+                if (cboSQLServer.Text.Trim() != string.Empty && txtServerUserName.Text.Trim() != string.Empty
+                    && txtServerPassword.Text != string.Empty && cboIQCareDatabase.Text.Trim() != string.Empty)
+                {
+                    connString =
+                        CreateConnectionString(cboSQLServer.Text.Trim(), txtServerUserName.Text.Trim(), txtServerPassword.Text
+                        , cboIQCareDatabase.Text.Trim());
+                    string IQCareVersion = GetIQCareVersion(connString);
+                    if (IQCareVersion != string.Empty && IQCareVersion.ToLower() != "Not An IQCare DB")
+                    {
+                        picIQCareDB.Image = Properties.Resources.right;
+                        lblIQCareVersion.Text = IQCareVersion;
+                    }
+                    else
+                    {
+                        picIQCareDB.Image = Properties.Resources.wrong;
+                        lblIQCareVersion.Text = IQCareVersion;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cboIQToolsDatabase_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string connString = string.Empty;
+
+            try
+            {
+                if (cboSQLServer.Text.Trim() != string.Empty && txtServerUserName.Text.Trim() != string.Empty
+                   && txtServerPassword.Text != string.Empty && cboIQCareDatabase.Text.Trim() != string.Empty)
+                {
+                    connString =
+                        CreateConnectionString(cboSQLServer.Text.Trim(), txtServerUserName.Text.Trim(), txtServerPassword.Text
+                        , cboIQToolsDatabase.Text.Trim());
+                    string IQToolsVersion = GetIQToolsVersion(connString);
+
+                    if (IQToolsVersion != string.Empty && IQToolsVersion.ToLower() != "Not An IQTools DB")
+                    {
+                        picIQToolsDB.Image = Properties.Resources.right;
+                        lblIQToolsVersion.Text = IQToolsVersion;
+                    }
+                    else
+                    {
+                        //picIQToolsDB.Image = Properties.Resources.wrong;
+                        lblIQToolsVersion.Text = IQToolsVersion;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private string GetIQToolsVersion(string connString)
+        {
+            string IQToolsVersion = string.Empty;
+            try
+            {
+                Entity en = new Entity();
+                DataRow dr = (DataRow)en.ReturnObject(connString, null, "Select TOP 1 DBVersion FROM aa_Version"
+                    , ClsUtility.ObjectEnum.DataRow, serverType);
+                IQToolsVersion = dr["DBVersion"].ToString();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.ToLower().Contains("not exist"))
+                    return "Not An IQTools DB";
+                //MessageBox.Show(ex.Message);
+            }
+            return IQToolsVersion;
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+           
+
+            //ValidateParameters
+            bool updateDB = chkUpdateIQTools.Checked;
+            string server = cboSQLServer.Text.Trim();
+            string serverUserName = txtServerUserName.Text.Trim();
+            string serverPassword = txtServerPassword.Text;
+            string iqcareDB = cboIQCareDatabase.Text.Trim();
+            string iqtoolsDB = cboIQToolsDatabase.Text.Trim();
+            string ILurl = txtILurl.Text.Trim();
+            string serverIP = string.Empty;
+            if (server.IndexOf("\\") != -1)
+            {
+                serverIP = server.Substring(0, server.IndexOf("\\"));
+            }
+            else
+            {
+                serverIP = server;
+            }
+            if (serverIP == ".")
+            {
+                serverIP = "localhost";
+            }
+
+            Thread saveSettingsT = new Thread(() => SaveSettings(updateDB, server, serverIP, serverUserName, serverPassword
+                , iqcareDB, iqtoolsDB, ILurl,MFLCode));
+            saveSettingsT.SetApartmentState(ApartmentState.STA);
+            saveSettingsT.Start();
+        }
+
+        private void SaveSettings(bool updateDB, string server, string serverIP, string serverUserName
+            , string serverPassword, string iqcareDB, string iqtoolsDB, string ILurl, string MFLCode)
+        {
+           
+            SetControlPropertyThreadSafe(picSettingsProgress, "Image", Properties.Resources.progress4);
+            SetControlPropertyThreadSafe(lblSaveProgress, "Text", "Saving...");
+            SetControlPropertyThreadSafe(btnSave, "Enabled", false);
+            string iqtoolsConnectionString = CreateConnectionString(server, serverUserName, serverPassword, iqtoolsDB);
+            string iqcareConnectionString = CreateConnectionString(server, serverUserName, serverPassword, iqcareDB);
+            if (updateDB)
+            {
+                if (Entity.CreateIQToolsDB("microsoft sql server", serverUserName, server, serverPassword, iqtoolsDB, "iqcare"))
+                {
+                    Entity.SetConnString(iqtoolsConnectionString);
+                    Entity.SetServerType("mssql");
+                    Entity.SetEMRConnString(iqtoolsConnectionString, iqcareConnectionString, serverIP, iqcareDB, "iqcare", "mssql"
+                        , GetIQCareVersion(iqcareConnectionString),ILurl, GetMFLCode(iqcareConnectionString));
+                }
+                else
+                {
+                    SetControlPropertyThreadSafe(picSettingsProgress, "Image", null);
+                    SetControlPropertyThreadSafe(lblSaveProgress, "Text", "Error Updating the IQTools DB");
+                    SetControlPropertyThreadSafe(btnSave, "Enabled", true);
+                    return;
+                }
+            }
+            else
+            {
+                Entity.SetConnString(iqtoolsConnectionString);
+                Entity.SetServerType("mssql");
+                Entity.SetEMRConnString(iqtoolsConnectionString, iqcareConnectionString, serverIP, iqcareDB, "iqcare", "mssql", GetIQCareVersion(iqcareConnectionString), ILurl, GetMFLCode(iqcareConnectionString));
+            }
+            SetControlPropertyThreadSafe(picSettingsProgress, "Image", null);
+            SetControlPropertyThreadSafe(lblSaveProgress, "Text", "");
+            SetControlPropertyThreadSafe(btnSave, "Enabled", true);
+            SetControlPropertyThreadSafe(tcLogin, "SelectedTab", tpLogin);
+            SetControlPropertyThreadSafe(picLoad, "Image", Properties.Resources.right);
+            SetControlPropertyThreadSafe(lblLoad, "Text", "Settings Successfully Saved");
+        }
+
+        private void chkRefresh_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboFacility_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+    

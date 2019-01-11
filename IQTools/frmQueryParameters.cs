@@ -18,6 +18,7 @@ namespace IQTools
     {
         private ParameterList parameters;
         private DbCommand command;
+        DateTimePicker dtp = new DateTimePicker();
 
         public frmQueryParameters(ParameterList pl, DbCommand cmd)
         {
@@ -41,8 +42,12 @@ namespace IQTools
                 }
                 if (j == 0)
                 {
+                    dtp.Name = "dtpFromDate";
+                    dtp.CustomFormat = "dd/MM/yyyy";
+                    //dtp.Value=
                     int row = dgvQryParams.Rows.Add();
                     dgvQryParams.Rows[row].Cells[0].Value = p.FullName;
+                    //dtpFromDate = new System.Windows.Forms.DateTimePicker();
                     dgvQryParams.Rows[row].Cells[1].Value = p.DataType.ToString();
                     myParameters.Add(p.FullName, p.DataType.ToString());
                 }

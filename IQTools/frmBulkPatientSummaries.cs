@@ -1,16 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Excel = Microsoft.Office.Interop.Excel;
-using Microsoft.CSharp;
-
-
 
 namespace IQTools
 {
@@ -88,44 +80,47 @@ namespace IQTools
             browseFile.Title = "Browse Excel file";
 
 
-            if (browseFile.ShowDialog() == DialogResult.OK)
-            {
-                dgvPatients.DataSource = null;
-                dgvPatients.Columns.Clear();
+            //if (browseFile.ShowDialog() == DialogResult.OK)
+            //{
+            //    dgvPatients.DataSource = null;
+            //    dgvPatients.Columns.Clear();
 
-                Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-                Excel.Workbook workbook = app.Workbooks.Open(browseFile.FileName);
-                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
+            //    var xl = new FileInfo(browseFile.FileName);
+            //    using (var package = new ExcelPackage(x1))
+            //    { 
+                   
+            //    Excel.Workbook workbook = app.Workbooks.Open(browseFile.FileName);
+            //    Excel.Worksheet worksheet = (Excel.Worksheet)workbook.ActiveSheet;
 
-                int rcount = worksheet.UsedRange.Rows.Count;
+            //    int rcount = worksheet.UsedRange.Rows.Count;
 
-                int i = 0;
+            //    int i = 0;
 
-                //Initializing Columns
-                dgvPatients.ColumnCount = worksheet.UsedRange.Columns.Count;
+            //    //Initializing Columns
+            //    dgvPatients.ColumnCount = worksheet.UsedRange.Columns.Count;
 
-                for (int x = 0; x < dgvPatients.ColumnCount; x++)
-                {
-                    dgvPatients.Columns[x].Name = "Column" + x.ToString();
-                }
+            //    for (int x = 0; x < dgvPatients.ColumnCount; x++)
+            //    {
+            //        dgvPatients.Columns[x].Name = "Column" + x.ToString();
+            //    }
 
-                for (; i < rcount; i++)
-                {
-                    dgvPatients.Rows.Add(((Excel.Range)worksheet.Cells[i + 1, 1]).Value, ((Excel.Range)worksheet.Cells[i + 1, 2]).Value);
-                }
+            //    for (; i < rcount; i++)
+            //    {
+            //        dgvPatients.Rows.Add(((Excel.Range)worksheet.Cells[i + 1, 1]).Value, ((Excel.Range)worksheet.Cells[i + 1, 2]).Value);
+            //    }
 
-                //Add Checkbox column
-                if (dgvPatients.Columns[0].HeaderText != "Select")
-                {
-                    DataGridViewCheckBoxColumn selectPatient = new DataGridViewCheckBoxColumn();
-                    selectPatient.HeaderText = "Select";
-                    selectPatient.FalseValue = "0";
-                    selectPatient.TrueValue = "1";
-                    dgvPatients.Columns.Insert(0, selectPatient);
-                }
+            //    //Add Checkbox column
+            //    if (dgvPatients.Columns[0].HeaderText != "Select")
+            //    {
+            //        DataGridViewCheckBoxColumn selectPatient = new DataGridViewCheckBoxColumn();
+            //        selectPatient.HeaderText = "Select";
+            //        selectPatient.FalseValue = "0";
+            //        selectPatient.TrueValue = "1";
+            //        dgvPatients.Columns.Insert(0, selectPatient);
+            //    }
 
-                chkSelectAll.Text = "Select all [" + Convert.ToString(dgvPatients.RowCount) + " records]";
-            }
+            //    chkSelectAll.Text = "Select all [" + Convert.ToString(dgvPatients.RowCount) + " records]";
+            //}
         }
 
         private void chkSelectAll_CheckedChanged(object sender, EventArgs e)
