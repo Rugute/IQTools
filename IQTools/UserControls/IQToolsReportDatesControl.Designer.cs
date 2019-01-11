@@ -87,9 +87,9 @@
             this.dtpToDate.CustomFormat = "dd/MM/yyyy";
             this.dtpToDate.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToDate.Location = new System.Drawing.Point(46, 33);
+            this.dtpToDate.Location = new System.Drawing.Point(57, 33);
             this.dtpToDate.Name = "dtpToDate";
-            this.dtpToDate.Size = new System.Drawing.Size(132, 22);
+            this.dtpToDate.Size = new System.Drawing.Size(132, 26);
             this.dtpToDate.TabIndex = 5;
             // 
             // dtpFromDate
@@ -97,9 +97,9 @@
             this.dtpFromDate.CustomFormat = "dd/MM/yyyy";
             this.dtpFromDate.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFromDate.Location = new System.Drawing.Point(46, 3);
+            this.dtpFromDate.Location = new System.Drawing.Point(57, 3);
             this.dtpFromDate.Name = "dtpFromDate";
-            this.dtpFromDate.Size = new System.Drawing.Size(132, 22);
+            this.dtpFromDate.Size = new System.Drawing.Size(132, 26);
             this.dtpFromDate.TabIndex = 4;
             // 
             // lblFromDate
@@ -109,7 +109,7 @@
             this.lblFromDate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFromDate.Location = new System.Drawing.Point(3, 0);
             this.lblFromDate.Name = "lblFromDate";
-            this.lblFromDate.Size = new System.Drawing.Size(37, 13);
+            this.lblFromDate.Size = new System.Drawing.Size(48, 19);
             this.lblFromDate.TabIndex = 2;
             this.lblFromDate.Text = "From:";
             this.lblFromDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -119,9 +119,9 @@
             this.lblToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblToDate.AutoSize = true;
             this.lblToDate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToDate.Location = new System.Drawing.Point(18, 30);
+            this.lblToDate.Location = new System.Drawing.Point(22, 30);
             this.lblToDate.Name = "lblToDate";
-            this.lblToDate.Size = new System.Drawing.Size(22, 13);
+            this.lblToDate.Size = new System.Drawing.Size(29, 19);
             this.lblToDate.TabIndex = 3;
             this.lblToDate.Text = "To:";
             this.lblToDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -146,7 +146,8 @@
             this.lstPeriods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstPeriods.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstPeriods.FormattingEnabled = true;
-            this.lstPeriods.Location = new System.Drawing.Point(3, 30);
+            this.lstPeriods.ItemHeight = 19;
+            this.lstPeriods.Location = new System.Drawing.Point(3, 36);
             this.lstPeriods.Name = "lstPeriods";
             this.lstPeriods.Size = new System.Drawing.Size(175, 190);
             this.lstPeriods.TabIndex = 2;
@@ -162,12 +163,12 @@
             "Annually"});
             this.cboDateRanges.Location = new System.Drawing.Point(3, 3);
             this.cboDateRanges.Name = "cboDateRanges";
-            this.cboDateRanges.Size = new System.Drawing.Size(175, 21);
+            this.cboDateRanges.Size = new System.Drawing.Size(175, 27);
             this.cboDateRanges.TabIndex = 1;
             // 
             // IQToolsReportDatesControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.spc1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

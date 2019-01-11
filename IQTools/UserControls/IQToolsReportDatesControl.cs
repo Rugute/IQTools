@@ -10,10 +10,14 @@ using System.Windows.Forms;
 namespace IQTools.UserControls
 {
     public partial class IQToolsReportDatesControl : UserControl
+
     {
+        
         public IQToolsReportDatesControl()
         {
             InitializeComponent();
+            
+
         }
     }
 }
