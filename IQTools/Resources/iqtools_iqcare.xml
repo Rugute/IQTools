@@ -3,6 +3,82 @@
   <default_schemas>
     <item name="dbo" case_sens="0" />
   </default_schemas>
+  <view>
+    <schema name="dbo" case_sens="0" />
+    <name name="IQC_FirstVL" case_sens="0" />
+    <system>0</system>
+    <visible>1</visible>
+    <fields>
+      <field>
+        <name>
+          <item name="PatientPK" case_sens="1" />
+        </name>
+        <type_name>int</type_name>
+        <type platform="net">Int32</type>
+        <size>4</size>
+        <precision>10</precision>
+        <scale>255</scale>
+      </field>     
+      <field>
+        <name>
+          <item name="FirstVL" case_sens="1" />
+        </name>
+        <type_name>int</type_name>
+        <type platform="net">Int32</type>
+        <size>4</size>
+        <precision>10</precision>
+        <scale>255</scale>
+      </field>
+      <field>
+        <name>
+          <item name="FirstVLDate" case_sens="1" />
+        </name>
+        <type_name>datetime</type_name>
+        <type platform="net">DateTime</type>
+        <size>8</size>
+        <precision>23</precision>
+        <scale>3</scale>
+      </field>
+    </fields>
+  </view>
+  <view>
+    <schema name="dbo" case_sens="0" />
+    <name name="IQC_LastVL" case_sens="0" />
+    <system>0</system>
+    <visible>1</visible>
+    <fields>
+      <field>
+        <name>
+          <item name="PatientPK" case_sens="1" />
+        </name>
+        <type_name>int</type_name>
+        <type platform="net">Int32</type>
+        <size>4</size>
+        <precision>10</precision>
+        <scale>255</scale>
+      </field>
+      <field>
+        <name>
+          <item name="LastVL" case_sens="1" />
+        </name>
+        <type_name>int</type_name>
+        <type platform="net">Int32</type>
+        <size>4</size>
+        <precision>10</precision>
+        <scale>255</scale>
+      </field>
+      <field>
+        <name>
+          <item name="LastVLDate" case_sens="1" />
+        </name>
+        <type_name>datetime</type_name>
+        <type platform="net">DateTime</type>
+        <size>8</size>
+        <precision>23</precision>
+        <scale>3</scale>
+      </field>
+    </fields>
+  </view>
   <view>   
     <schema name="dbo" case_sens="0" />
     <name name="IQC_bWAB" case_sens="0" />
